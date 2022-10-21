@@ -1,9 +1,10 @@
 import './App.css';
+import Mapbox from './components/Mapbox';
 
 function App() {
   return (
    <div>
-    <h1>Tourify Web Application</h1>
+    <Mapbox/>
    </div>
   );
 }
