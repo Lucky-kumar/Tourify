@@ -1,8 +1,13 @@
 import React from 'react'
+import Mapbox from './../components/Mapbox';
 
 const Home = () => {
   return (
-    <div>Home</div>
+    <div>
+      <Mapbox/>
+    </div>
+
+
   )
 }
 
