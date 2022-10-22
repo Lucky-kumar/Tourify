@@ -1,10 +1,12 @@
 import './App.css';
 import Mapbox from './components/Mapbox';
+import Login from './pages/Login';
 
 function App() {
   return (
    <div>
-    <Mapbox/>
+    
+    <Login/>
    </div>
   );
 }
