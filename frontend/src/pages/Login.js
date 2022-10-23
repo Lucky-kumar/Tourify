@@ -1,16 +1,15 @@
 import React from 'react'
 import './Login.css'
 import GoogleIcon from '@mui/icons-material/Google';
+import CloudIcon from '@mui/icons-material/Cloud';
 
 const Login = () => {
   return (
+    <div >
     <div className='form'>
       <h1>Login</h1>
       <input type="text"
       placeholder="Email"
-      onFocus={()=>{
-        
-      }}
       />
       <input type="password"
       placeholder="Password"
@@ -18,8 +17,9 @@ const Login = () => {
       {/* <Link to={}> */}
         <button className='btn'>Login</button>
         {/* </Link> */}
-        <h3 style={{color:"grey"}}>Or</h3>
-        <div style={{color:"red"}}><GoogleIcon/></div>
+        <h5 style={{color:"grey"}}>Or</h5>
+        <div style={{color:"red"} } className="google"><GoogleIcon/></div>
+      </div>
       </div>
   )
 }
