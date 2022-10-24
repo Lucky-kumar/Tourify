@@ -10,9 +10,11 @@ const Login = () => {
       <h1>Login</h1>
       <input type="text"
       placeholder="Email"
+      required
       />
       <input type="password"
       placeholder="Password"
+      required
       />
       {/* <Link to={}> */}
         <button className='btn'>Login</button>
