@@ -6,7 +6,6 @@
     background-color: rgb(186, 243, 243);
 }
 .form{
-    
     /* position:fixed;
     right: 50px;
     top: 150px; */
@@ -90,9 +89,43 @@ svg.icon{
     background-color: transparent;
     color: white;
 }
+.image{
+    background-color: transparent;
+    position: fixed;
+}
 .people{
     width: 500px;
-    position: fixed;
-    left:50px;
-    top:150px;
+    bottom:0px;
+    /* z-index: 1; */
+}
+.image_1{
+    width: 500px;
+    top: 250px;
+    left: 650px;
+    
+}
+.cloud{
+    width: 200px; 
+}
+.plane{
+    width:300px;
+    top:50px;
+    left:-50px;
+    transform:rotate(-10deg);
+    filter: brightness(1.5);
+    /* z-index: 1; */
+}
+.car{
+    width: 300px;
+    right:550px;
+    bottom:14px;
+    /* top:600px; */
+    filter:invert(100%);
+}
+.building{
+    width:400px;
+    left:10px;
+    bottom:-110px;
+    /* top:200px; */
+    filter:invert(100%);
 }
