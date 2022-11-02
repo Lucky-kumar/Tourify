@@ -6,6 +6,8 @@ import people from './images/team-4423339.svg'
 import image1 from './images/computer-6242945.svg'
 import plane from './images/airplane-2434022.png' 
 import cloud from './images/cloud-303182.svg'
+import building from './images/building-2817474.svg'
+import car from './images/car-35502.svg'
 
 const Login = () => {
   return (
@@ -19,8 +21,11 @@ const Login = () => {
         <img src={people} alt="" srcset="" className="people image" style={{}}/>
         <img src={image1} alt="" srcset="" className="image_1 image" style={{}}/>
         <img src={plane} alt="" srcset="" className="plane image" style={{}}/>
+        {/* <img src={building} alt="" srcset="" className="building image" style={{}}/>
+        <img src={car} alt="" srcset="" className="car image" style={{}}/> */}
       <div >
-      
+        
+      {/* <img src={building} alt="" srcset="" className="building image" style={{}}/> */}
         {/* <img src={image2} alt="" srcset="" className="image_2" style={{}}/> */}
       </div>
       <div className='form'>
