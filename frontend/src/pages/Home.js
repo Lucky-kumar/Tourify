@@ -1,4 +1,5 @@
 import React from 'react'
+// import Mapbox from './../components/Mapbox';
 import Mapbox from './../components/Mapbox';
 
 const Home = () => {

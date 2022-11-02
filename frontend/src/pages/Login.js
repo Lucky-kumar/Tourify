@@ -61,7 +61,8 @@ const Login = () => {
               backgroundColor: "transparent",
               width: "100%", textAlign: "center"
             }}>Login with Google</div>
-            <GoogleIcon className='icon' /></div>
+            {/* <GoogleIcon className='icon' /> */}
+            </div>
         </form>
         {/* <Link to={`/register`}> */}
         <div style={{

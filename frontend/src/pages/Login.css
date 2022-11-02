@@ -2,9 +2,9 @@
     /* width: 200px; */
     font-size: 200px;
 }
-*{
-    /* background-color: rgb(186, 243, 243); */
-}
+body{
+    background-color: rgb(186, 243, 243);
+
 .form{
     /* position:fixed;
     right: 50px;
