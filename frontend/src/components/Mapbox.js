@@ -16,6 +16,7 @@ const TOKEN = process.env.REACT_APP_MAPBOX_ACCESS_TOKEN;
 
 const Mapbox = () => {
   const [pins, setPins] = useState([]);
+  const [currentPlaceId, setCurrentPlaceId] = useState(null)
   const [viewport, setViewport] = useState({
     width: "100vw",
     height: "100vh",
@@ -39,6 +40,12 @@ const Mapbox = () => {
     };
     getPins()
   }, [])
+
+  const handleMarkerClick = (id) => {
+    setCurrentPlaceId(id)
+  };
+
+
   return (
     <Map
       initialViewState={viewport}
@@ -57,29 +64,34 @@ const Mapbox = () => {
             offsetTop={-10}
             style={{ borderRadius: "8px" }}
           >
-            <RoomIcon style={{ fontSize: viewport.zoom * 5 }} />
+            <RoomIcon style={{ fontSize: viewport.zoom * 5, cursor: "pointer" }}
+              onClick={() => handleMarkerClick(p._id)}
+            />
 
           </Marker>
-          <Popup longitude={p.lng} latitude={p.lat}
-            anchor="bottom"
-            closeButton={true}
-            closeOnClick={false}
-          >
-            <div className="card" style={{ marginTop: "2px" }}>
-              <label style={{ color: "red", fontSize: "18px", marginLeft: "0.4em" }} >Place</label>
-              <h4 className="place" style={{ color: "Black", fontSize: "20px", backgroundColor: "transparent" }} >{p.title}</h4>
-              <label style={{ color: "red", fontSize: "18px", marginLeft: "0.4em" }} >Review</label>
-              <p className="desc" style={{ fontSize: "20px", marginLeft: "0.3em", color: "black", fontWeight: "bold" }} >{p.desc}</p>
-              <label style={{ color: "red", fontSize: "18px", marginLeft: "0.5em" }}>Rating</label>
-              <Rating
-                name="simple-controlled"
-                value={p.rating}
-                style={{ fontWeight: "bold", marginLeft: "0.5em" }}
-              />
+          {p._id === currentPlaceId &&
+            <Popup longitude={p.lng} latitude={p.lat}
+              anchor="bottom"
+              closeButton={true}
+              closeOnClick={false}
+              onClose={() => setCurrentPlaceId(null)}
+            >
+              <div className="card" style={{ marginTop: "2px" }}>
+                <label style={{ color: "red", fontSize: "18px", marginLeft: "0.4em" }} >Place</label>
+                <h4 className="place" style={{ color: "Black", fontSize: "20px", backgroundColor: "transparent" }} >{p.title}</h4>
+                <label style={{ color: "red", fontSize: "18px", marginLeft: "0.4em" }} >Review</label>
+                <p className="desc" style={{ fontSize: "20px", marginLeft: "0.3em", color: "black", fontWeight: "bold" }} >{p.desc}</p>
+                <label style={{ color: "red", fontSize: "18px", marginLeft: "0.5em" }}>Rating</label>
+                <Rating
+                  name="simple-controlled"
+                  value={p.rating}
+                  style={{ fontWeight: "bold", marginLeft: "0.5em" }}
+                />
 
-              <span className="date" style={{ marginLeft: "0.5em" }} >{format(p.createdAt)}</span>
-            </div>
-          </Popup>
+                <span className="date" style={{ marginLeft: "0.5em" }} >{format(p.createdAt)}</span>
+              </div>
+            </Popup>
+          }
         </>
       ))}
       <Geocoder />
