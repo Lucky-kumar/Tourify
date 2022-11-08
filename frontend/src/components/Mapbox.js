@@ -34,6 +34,7 @@ const Mapbox = () => {
         longitude={78.182831}
         offsetLeft={-20}
         offsetTop={-10}
+        style={{borderRadius:"8px"  }}
       >
         <RoomIcon style={{ fontSize: viewport.zoom * 5 }} />
 
