@@ -42,7 +42,7 @@ const Mapbox = () => {
         anchor="bottom"
         closeButton={true}
         closeOnClick={false}
-        style={{borderRadius:"10px"  }}
+        style={{borderRadius:"8px"  }}
       >
         <div className="card" style={{backgroundColor:"lightblue", marginTop:"2px" }}>
           <label style={{color: "red" , fontSize:"18px", marginLeft:"0.4em"}}>Place</label>
