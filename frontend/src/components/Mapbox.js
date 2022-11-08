@@ -34,6 +34,7 @@ const Mapbox = () => {
         longitude={78.182831}
         offsetLeft={-20}
         offsetTop={-10}
+        style={{borderRadius:"8px"  }}
       >
         <RoomIcon style={{ fontSize: viewport.zoom * 5 }} />
 
@@ -42,19 +43,20 @@ const Mapbox = () => {
         anchor="bottom"
         closeButton={true}
         closeOnClick={false}
+     
       >
-        <div className="card">
-          <label>Place</label>
-          <h4 className="place">Gwalior</h4>
-          <label>Review</label>
-          <p className="desc">Good Place</p>
-          <label>Rating</label>
-          <Rating
+        <div className="card" >
+          <label >Place</label>
+          <h4 className="place" >Gwalior</h4>
+          <label >Review</label>
+          <p className="desc" >Good Place</p>
+          <label >Rating</label>
+          <Rating 
             name="simple-controlled"
             value={4}
           />
 
-          <span className="date">created 2 mins ago</span>
+          <span className="date" >created 2 mins ago</span>
         </div>
       </Popup>
       <Geocoder />
