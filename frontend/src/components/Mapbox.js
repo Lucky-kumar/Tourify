@@ -8,6 +8,7 @@ import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import "../App.css"
 import axios from 'axios'
+import { format } from "timeago.js"
 
 
 const TOKEN = process.env.REACT_APP_MAPBOX_ACCESS_TOKEN;
@@ -19,7 +20,7 @@ const Mapbox = () => {
     width: "100vw",
     height: "100vh",
     longitude: 78.169894,
-    latitude:  26.249354,
+    latitude: 26.249354,
     zoom: 14
 
   })
@@ -76,7 +77,7 @@ const Mapbox = () => {
                 style={{ fontWeight: "bold", marginLeft: "0.5em" }}
               />
 
-              <span className="date" style={{ marginLeft: "0.5em" }} >created 2 mins ago</span>
+              <span className="date" style={{ marginLeft: "0.5em" }} >{format(p.createdAt)}</span>
             </div>
           </Popup>
         </>
