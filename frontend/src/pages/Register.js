@@ -5,7 +5,7 @@ import cloud from "../pages/images/cloud-303182.svg";
 import image1 from "../pages/images/computer-6242945.svg"
 import aeroplane from "../pages/images/airplane.png"
 import people from "../pages/images/peoplee.webp"
-
+import {Link} from 'react-router-dom'
 const Register = () => {
   return (
     <div className="page">
@@ -30,7 +30,7 @@ const Register = () => {
             <span></span>
             <input className='inputBox' id="email" placeholder='Email' type="email" required />
             <span></span>
-            <input className='inputBox' id="password" placeholder='password' type="password" required />
+            <input className='inputBox' id="password" placeholder='Password' type="password" required />
             <span></span>
             <input className='inputBox' id="confirmpassword" placeholder='Re-password' type="passowrd" required />
             <span></span>
@@ -62,9 +62,9 @@ const Register = () => {
           </div>
         </form>
 
-        {/* <Link to={'/Login.js'}> */}
+        <Link to={'/Login.js'}>
         <div style={{color:"blue", marginTop:"7px"}}>Login Now</div>
-        {/* </Link> */}
+        </Link>
       </div>
     </div>
   )

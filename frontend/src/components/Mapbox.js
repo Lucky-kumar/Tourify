@@ -112,12 +112,12 @@ const Mapbox = () => {
               closeOnClick={false}
               onClose={() => setCurrentPlaceId(null)}
             >
-              <div className="card" style={{ marginTop: "2px" , backgroundColor :"lightblue" , width:"10px" }}>
-                <label style={{ color: "red", fontSize: "18px", marginLeft: "0.4em" }} >Place</label>
-                <h4 className="place" style={{ color: "Black", fontSize: "18x", backgroundColor: "transparent" }} >{p.title}</h4>
-                <label style={{ color: "red", fontSize: "18px", marginLeft: "0.4em" }} >Review</label>
-                <p className="desc" style={{ fontSize: "20px", marginLeft: "0.3em", color: "black", fontWeight: "bold" }} >{p.desc}</p>
-                <label style={{ color: "red", fontSize: "18px", marginLeft: "0.5em" }}>Rating</label>
+              <div className="card" style={{backgroundColor :"transparent",width:"150px" }}>
+                <label style={{ color: "red", fontWeight:"bold",fontSize:"1.9em",textDecoration:"none"}} >Place</label>
+                <p className="place" style={{ color: "Black",fontSize:"1.3em",fontWeight:"bold"}} >{p.title}</p>
+                <label style={{ color: "red",fontWeight:"bold",fontSize:"1.9em"}} >Review</label>
+                <p className="desc" style={{color: "black",fontSize:"1.3em"}} >{p.desc}</p>
+                <label style={{ color: "red",fontWeight:"bold",fontSize:"1.9em"}}>Rating</label>
                 <Rating
                   name="read-only"
                   value={p.rating}
@@ -125,7 +125,7 @@ const Mapbox = () => {
                   readOnly
                 />
 
-                <span className="date" style={{ marginLeft: "0.5em" }} >{format(p.createdAt)}</span>
+                <span className="date" style={{textAlign:"center", color:"grey"}} >{format(p.createdAt)}</span>
               </div>
             </Popup>
           }
