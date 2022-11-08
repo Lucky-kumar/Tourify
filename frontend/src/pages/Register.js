@@ -1,5 +1,5 @@
 import React from 'react'
-import "./R.css"
+import "./Register.css"
 import GoogleIcon from '@mui/icons-material/Google';
 import cloud from "../pages/images/cloud-303182.svg";
 import image1 from "../pages/images/computer-6242945.svg"
