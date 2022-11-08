@@ -50,7 +50,7 @@ const Mapbox = () => {
           <h4 className="place" style={{color: "Black" , fontSize:"20px", marginLeft:"-8em", backgroundColor:"transparent"}} >Gwalior</h4>
           <label style={{color: "red" , fontSize:"18px", marginLeft:"0.4em"}} >Review</label>
           <p className="desc" style={{fontSize:"20px", marginLeft:"0.3em" ,color:"black" , fontWeight:"bold"}} >Good Place</p>
-          <label  style={{color: "red" , fontSize:"18px", marginLeft:"0.4em" }}>Rating</label>
+          <label  style={{color: "red" , fontSize:"18px", marginLeft:"0.3em" }}>Rating</label>
           <Rating 
             name="simple-controlled"
             value={4}
