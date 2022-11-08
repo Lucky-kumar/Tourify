@@ -1,26 +1,24 @@
 import React from 'react'
 import "./Register.css"
 import GoogleIcon from '@mui/icons-material/Google';
-import people from './images/team-4423339.svg'
-import image1 from './images/computer-6242945.svg'
-import plane from './images/airplane-2434022.png' 
-import cloud from './images/cloud-303182.svg'
-import building from './images/building-2817474.svg'
-import car from './images/car-35502.svg'
+import {image1} from './images/computer-6242945.svg'
+import {aeroplane} from './images/airplane.png'
+import {cloud} from './images/cloud-303182.svg'
+import {PeopleT} from './images/PeopleT.webp'
 
 const Register = () => {
   return (
     <div className="page">
       <div className="images" style={{ display: "flex", flexWrap: "wrap", justifyContent: "space-between" }}>
-      <img src={cloud} alt="" srcset="" className="cloud image" style={{left:"500px", top:"20px"}}/>
-      <img src={cloud} alt="" srcset="" className="cloud image" style={{left:"350px", top:"-50px"}}/>
+      <img src={cloud} alt="" srcset="" className="cloud image" style={{left:"600px", top:"20px"}}/>
+      <img src={cloud} alt="" srcset="" className="cloud image" style={{left:"400px", top:"-50px"}}/>
       <img src={cloud} alt="" srcset="" className="cloud image" style={{left:"950px"}}/>
       <img src={cloud} alt="" srcset="" className="cloud image" style={{left:"1350px", width:"100px"}}/>
-      <img src={cloud} alt="" srcset="" className="cloud image" style={{left:"250px", width:"100px",top:"150px"}}/>
-      <img src={cloud} alt="" srcset="" className="cloud image" style={{left:"100px", top:"10px" ,width:"200px"}}/>
-        <img src={people} alt="" srcset="" className="people image" style={{width:"400px"}}/>
+      <img src={cloud} alt="" srcset="" className="cloud image" style={{left:"300px", width:"100px",top:"150px"}}/>
+      <img src={cloud} alt="" srcset="" className="cloud image" style={{ top:"-18px" ,width:"200px"}}/>
+        <img src={PeopleT} alt="" srcset="" className="people image" style={{}}/>
         <img src={image1} alt="" srcset="" className="image_1 image" style={{left:"500px"}}/>
-        <img src={plane} alt="" srcset="" className="plane image" style={{left: "50px"}}/>
+        <img src={aeroplane} alt="" srcset="" className="plane image" style={{left: "50px"}}/>
         </div>
       <div id="registration_container">
        
@@ -50,8 +48,7 @@ const Register = () => {
             <div style={{ color: "red", margin: "10px" }}
               className="google">
               <div className='title-google' >Login with Google</div>
-              {/* <GoogleIcon></GoogleIcon> */}
-
+              <GoogleIcon className='icon' />
             </div>
           </div>
         </form>

@@ -42,19 +42,20 @@ const Mapbox = () => {
         anchor="bottom"
         closeButton={true}
         closeOnClick={false}
+        style={{borderRadius:"10px"  }}
       >
-        <div className="card">
-          <label>Place</label>
-          <h4 className="place">Gwalior</h4>
-          <label>Review</label>
-          <p className="desc">Good Place</p>
-          <label>Rating</label>
-          <Rating
+        <div className="card" style={{backgroundColor:"lightblue", marginTop:"2px" }}>
+          <label style={{color: "red" , fontSize:"18px", marginLeft:"0.4em"}}>Place</label>
+          <h4 className="place" style={{color: "Black" , fontSize:"20px", marginLeft:"-8em", backgroundColor:"transparent"}}>Gwalior</h4>
+          <label style={{color: "red" , fontSize:"18px", marginLeft:"0.4em"}}>Review</label>
+          <p className="desc" style={{fontSize:"20px", marginLeft:"0.3em" ,color:"black" , fontWeight:"bold"}}>Good Place</p>
+          <label style={{color: "red" , fontSize:"18px", marginLeft:"0.4em" }}>Rating</label>
+          <Rating style={{fontWeight:"bold" , marginLeft:"0.5em" }}
             name="simple-controlled"
             value={4}
           />
 
-          <span className="date">created 2 mins ago</span>
+          <span className="date" style={{marginLeft:"0.5em"}}>created 2 mins ago</span>
         </div>
       </Popup>
       <Geocoder />

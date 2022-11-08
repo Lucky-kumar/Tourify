@@ -12,7 +12,7 @@
     width:30em;
     height:38em;
     background-color: white;
-    border: 1px solid black;
+    border: 3px solid rgb(100, 100, 195);
     position: relative;
     left: 60em;
     display: flex;
