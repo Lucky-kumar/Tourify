@@ -20,6 +20,7 @@ const Register = () => {
         <img src={image1} alt=""  className="image_1 image" style={{left:"500px"}}/>
         <img src={aeroplane} alt=""  className="plane image" style={{left: "50px"}}/>
         </div>
+
       <div id="registration_container">
        
         <form action="" >
@@ -33,7 +34,7 @@ const Register = () => {
             <span></span>
             <input id="confirmpassword" placeholder='Re-password' type="passowrd" required />
             <span></span>
-            <input id="contact_number" placeholder='Contact Number' type="number" required />
+            <input id="contact_number" placeholder='Contact Number' type="text" required />
             <span></span>
             <input id="address" placeholder='Address' type="text" required />
             <span></span>
@@ -45,15 +46,24 @@ const Register = () => {
 
             <h4>Or</h4>
 
-            <div className="Google">
-              <div className='title-google' >Login with Google
-              <GoogleIcon className='Icon' /></div>
+            <div style={{
+            color: "red",
+            margin: "10px"
+          }}
+            className="google">
+            <div style={{
+              color: "white",
+              backgroundColor: "transparent",
+              width: "100%", textAlign: "center"
+            }}>Login with Google</div>
+            <GoogleIcon className='icon' />
             </div>
+            
           </div>
         </form>
 
         {/* <Link to={'/Login.js'}> */}
-        <div className='change'>Login Now</div>
+        <div style={{color:"blue", marginTop:"7px"}}>Login Now</div>
         {/* </Link> */}
       </div>
     </div>
