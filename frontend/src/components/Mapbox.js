@@ -17,6 +17,7 @@ const TOKEN = process.env.REACT_APP_MAPBOX_ACCESS_TOKEN;
 const Mapbox = () => {
   const [pins, setPins] = useState([]);
   const [currentPlaceId, setCurrentPlaceId] = useState(null)
+  const [newPlace, setNewPlace] = useState(null)
   const [viewport, setViewport] = useState({
     width: "100vw",
     height: "100vh",
@@ -32,7 +33,6 @@ const Mapbox = () => {
       try {
         const res = await axios.get("/pins");
         setPins(res.data);
-        console.log(res.data)
 
       } catch (err) {
         console.log(err);
@@ -45,6 +45,16 @@ const Mapbox = () => {
     setCurrentPlaceId(id)
   };
 
+  const handleRightClick = (e) => {
+    console.log(e)
+    const lng = e.lngLat.lng;
+    const lat = e.lngLat.lat;
+    setNewPlace({
+      lat,
+      lng,
+    });
+  }
+
 
   return (
     <Map
@@ -53,6 +63,7 @@ const Mapbox = () => {
       mapStyle="mapbox://styles/mapbox/streets-v9"
       mapboxAccessToken={TOKEN}
       onViewportChange={nextViewport => setViewport(nextViewport)}
+      onContextMenu={handleRightClick}
     >
       {pins.map(p => (
         <>
@@ -94,6 +105,19 @@ const Mapbox = () => {
           }
         </>
       ))}
+
+      {newPlace &&  (
+         <Popup 
+         longitude={newPlace.lng} 
+         latitude={newPlace.lat}
+         anchor="bottom"
+         closeButton={true}
+         closeOnClick={false}
+         onClose={() => setNewPlace(null)}
+       >
+        Hello
+       </Popup>
+      )}
       <Geocoder />
       <FullscreenControl style={{ marginRight: 40 }} position="bottom-right" />
       <GeolocateControl style={{ marginLeft: 40 }} position="top-left" />
