@@ -8,21 +8,19 @@
 }
 
 #registration_container{
-    margin-top: 3em;
+    margin-top: 2em;
     margin-bottom:20px;
-    width:30em;
-    height:38em;
+    width:28em;
+    height:39em;
     background-color: white;
-    border: 3px solid rgb(100, 100, 195);
     position: relative;
     left: 60em;
     display: flex;
     flex-direction: column;
     align-items: center;
-    box-shadow: 0 2px 4px rgba(0, 0 , 0 ,0.9) ;
 }
 #form-body{
-    margin-left: 5rem;
+    margin-left: 3rem;
     background-color: white;  
    
 }
@@ -31,50 +29,45 @@ input{
     padding: 10px;
     margin: 8px;
     width: 300px;
-    border-radius: 2em;
+    /* border-radius: 2em; */
     background-color: white;
 }
 
 .bttn{
-    width: 315px;
-    padding:10px;
+    width: 330px;
+    padding:7px;
     margin: 8px;
     border: solid 0px;
-    border-radius: 0px;
     color: white;
     background-color:rgb(100, 100, 195) ;
-    border-radius: 3em;
     font-size: medium;
 }
 
 h4{
     padding:5px;
     margin: 8px; 
-    margin-left: 11em;
+    margin-left: 9.5em;
+    color: grey;
 }
 
 .Google{
-    width: 300px;
-    padding:10px ;
-    margin: 8px;
+    width: 310px;
+    padding:3px ;
+    margin: 10px;
     border: solid 0px;
-    border-radius: 0px;
     color: white;
-    border-radius: 3rem;
-    background-color: red;
+    background-color: red; 
 }
 
-.title-google{
+
+
+.Icon , .title-google{
     background-color:transparent;
-    margin-left:5em;
+    text-align: right;    
+    color: white;
+    margin-left: 62px;
+}
+.chnage{
+    color: blue;
 }
 
-.Icon{
-    background: transparent;
-    color: white;
-    margin-right: -1.8em;
-}
-svg.Icon{
-    background-color: transparent;
-    color: white;
-} 
