@@ -6,8 +6,7 @@ import people from './images/team-4423339.svg'
 import image1 from './images/computer-6242945.svg'
 import plane from './images/airplane-2434022.png' 
 import cloud from './images/cloud-303182.svg'
-import building from './images/building-2817474.svg'
-import car from './images/car-35502.svg'
+
 
 const Login = () => {
   return (
