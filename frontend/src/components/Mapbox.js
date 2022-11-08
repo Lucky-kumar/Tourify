@@ -9,15 +9,20 @@ import Box from '@mui/material/Box';
 import "../App.css"
 import axios from 'axios'
 import { format } from "timeago.js"
+import "./styles/Mapbox.css"
 
 
 const TOKEN = process.env.REACT_APP_MAPBOX_ACCESS_TOKEN;
 
 
 const Mapbox = () => {
+  const email = "test@se.com"
   const [pins, setPins] = useState([]);
   const [currentPlaceId, setCurrentPlaceId] = useState(null)
   const [newPlace, setNewPlace] = useState(null)
+  const [title, setTitle] = useState(null);
+  const [desc, setDesc] = useState(null);
+  const [star, setStar] = useState(0);
   const [viewport, setViewport] = useState({
     width: "100vw",
     height: "100vh",
@@ -55,6 +60,26 @@ const Mapbox = () => {
     });
   }
 
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const newPin = {
+      email,
+      title,
+      desc,
+      rating: star,
+      lat: newPlace.lat,
+      lng: newPlace.lng,
+    };
+
+    try {
+      const res = await axios.post("/pins", newPin);
+      setPins([...pins, res.data]);
+      setNewPlace(null);
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
 
   return (
     <Map
@@ -71,8 +96,8 @@ const Mapbox = () => {
           <Marker
             latitude={p.lat}
             longitude={p.lng}
-            offsetLeft={-20}
-            offsetTop={-10}
+            offsetLeft={-viewport.zoom * 2.5}
+            offsetTop={-viewport.zoom * 5}
             style={{ borderRadius: "8px" }}
           >
             <RoomIcon style={{ fontSize: viewport.zoom * 5, cursor: "pointer" }}
@@ -94,7 +119,7 @@ const Mapbox = () => {
                 <p className="desc" style={{ fontSize: "20px", marginLeft: "0.3em", color: "black", fontWeight: "bold" }} >{p.desc}</p>
                 <label style={{ color: "red", fontSize: "18px", marginLeft: "0.5em" }}>Rating</label>
                 <Rating
-                  name="simple-controlled"
+                  name="read-only"
                   value={p.rating}
                   style={{ fontWeight: "bold", marginLeft: "0.5em" }}
                 />
@@ -106,17 +131,42 @@ const Mapbox = () => {
         </>
       ))}
 
-      {newPlace &&  (
-         <Popup 
-         longitude={newPlace.lng} 
-         latitude={newPlace.lat}
-         anchor="bottom"
-         closeButton={true}
-         closeOnClick={false}
-         onClose={() => setNewPlace(null)}
-       >
-        Hello
-       </Popup>
+      {newPlace && (
+        <Popup
+          longitude={newPlace.lng}
+          latitude={newPlace.lat}
+          anchor="bottom"
+          closeButton={true}
+          closeOnClick={false}
+          onClose={() => setNewPlace(null)}
+        >
+          <div>
+            <form className='pin_form' onSubmit={handleSubmit}>
+              <label>Title</label>
+              <input
+                placeholder="Enter a title"
+                autoFocus
+                onChange={(e) => setTitle(e.target.value)}
+              />
+              <label>Description</label>
+              <textarea
+                placeholder="Say us something about this place."
+                onChange={(e) => setDesc(e.target.value)}
+              />
+              <label>Rating</label>
+              <select onChange={(e) => setStar(e.target.value)}>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+              <button type="submit" className="submitButton">
+                Add Pin
+              </button>
+            </form>
+          </div>
+        </Popup>
       )}
       <Geocoder />
       <FullscreenControl style={{ marginRight: 40 }} position="bottom-right" />
