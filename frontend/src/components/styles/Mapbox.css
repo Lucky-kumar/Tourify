@@ -36,4 +36,5 @@
     color: white;
     background-color: tomato;
     cursor: pointer;
+    border: solid 2px tomato;
   }

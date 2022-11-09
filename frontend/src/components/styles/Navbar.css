@@ -1,0 +1,59 @@
+body{
+    margin: 0px;
+}
+
+.navbar{
+    margin: 1px;
+    border-radius: 50rem;
+    /* height: 3em; */
+
+}
+.navbar ul{
+    overflow: auto;
+}
+
+.first {
+    font-size: 26px;
+    font-weight: bold;
+
+}
+
+.navbar li {
+    color: black;
+    float: left;
+    list-style: none;
+    margin: 10px 10px;
+}
+
+.sec {
+    float: right;
+}
+
+.navbar li a{
+    color: black;
+    text-decoration: none;
+    list-style: none;
+    padding: 15px 5px;
+}
+
+li a:hover {
+    background-color: tomato;
+    border-radius: 12px;
+  }
+
+button{
+    background-color:tomato;  
+  border: none;
+  color: white;
+  padding: 5px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 30px;
+  
+}
+
+button:hover{
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    background-color: coral;
+}

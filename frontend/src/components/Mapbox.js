@@ -112,9 +112,9 @@ const Mapbox = () => {
               closeOnClick={false}
               onClose={() => setCurrentPlaceId(null)}
             >
-              <div className="card" style={{ marginTop: "2px" }}>
+              <div className="card" style={{ marginTop: "2px" , backgroundColor :"lightblue" , width:"10px" }}>
                 <label style={{ color: "red", fontSize: "18px", marginLeft: "0.4em" }} >Place</label>
-                <h4 className="place" style={{ color: "Black", fontSize: "20px", backgroundColor: "transparent" }} >{p.title}</h4>
+                <h4 className="place" style={{ color: "Black", fontSize: "18x", backgroundColor: "transparent" }} >{p.title}</h4>
                 <label style={{ color: "red", fontSize: "18px", marginLeft: "0.4em" }} >Review</label>
                 <p className="desc" style={{ fontSize: "20px", marginLeft: "0.3em", color: "black", fontWeight: "bold" }} >{p.desc}</p>
                 <label style={{ color: "red", fontSize: "18px", marginLeft: "0.5em" }}>Rating</label>
