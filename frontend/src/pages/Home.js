@@ -10,8 +10,12 @@ const Home = () => {
   return (
     <div>
       {/* <Navbar/> */}
-          <Sidebar />
-          <Mapbox />
+      <div className='sidebar_container'>
+        <Sidebar />
+      </div>
+      <div className='map_container'>
+        <Mapbox />
+      </div>
 
     </div>
 
