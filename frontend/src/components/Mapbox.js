@@ -122,6 +122,7 @@ const Mapbox = () => {
                   name="read-only"
                   value={p.rating}
                   style={{ fontWeight: "bold", marginLeft: "0.5em" }}
+                  readOnly
                 />
 
                 <span className="date" style={{ marginLeft: "0.5em" }} >{format(p.createdAt)}</span>

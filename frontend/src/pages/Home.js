@@ -3,13 +3,16 @@ import React from 'react'
 import Mapbox from './../components/Mapbox';
 import Navbar from './../components/Navbar'
 import Sidebar from '../components/Sidebar';
+import { Grid } from '@mui/material';
+import { flexbox } from '@mui/system';
 
 const Home = () => {
   return (
     <div>
-      <Navbar/>
-      <Mapbox/>
-      <Sidebar/>
+      {/* <Navbar/> */}
+          <Sidebar />
+          <Mapbox />
+
     </div>
 
 
