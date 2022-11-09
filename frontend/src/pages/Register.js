@@ -26,17 +26,17 @@ const Register = () => {
         <form action="" >
         <h1>Tourify</h1>
           <div className="form-body" id="form-body">
-            <input id="name" placeholder='Name' type="text" required />
+            <input className='inputBox' id="name" placeholder='Name' type="text" required />
             <span></span>
-            <input id="email" placeholder='Email' type="email" required />
+            <input className='inputBox' id="email" placeholder='Email' type="email" required />
             <span></span>
-            <input id="password" placeholder='password' type="password" required />
+            <input className='inputBox' id="password" placeholder='password' type="password" required />
             <span></span>
-            <input id="confirmpassword" placeholder='Re-password' type="passowrd" required />
+            <input className='inputBox' id="confirmpassword" placeholder='Re-password' type="passowrd" required />
             <span></span>
-            <input id="contact_number" placeholder='Contact Number' type="text" required />
+            <input className='inputBox' id="contact_number" placeholder='Contact Number' type="text" required />
             <span></span>
-            <input id="address" placeholder='Address' type="text" required />
+            <input className='inputBox' id="address" placeholder='Address' type="text" required />
             <span></span>
             <button className='bttn'>
               Register</button>

@@ -30,13 +30,13 @@ const Login = () => {
       <div className='form'>
       {/* <img src={plane} alt="" srcset="" className="plane" style={{}}/> */}
         <h1>Tourify</h1>
-        <form action="/login" method="post">
-          <input type="text"
+        <form action="/login" method="post" className='loginForm'>
+          <input className='IB' type="text"
             name="email"
             placeholder="Email"
             required
           />
-          <input type="password"
+          <input className='IB' type="password"
             name="password"
             placeholder="Password"
             required
