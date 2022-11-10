@@ -6,30 +6,10 @@ import PlaceCards from './PlaceCards';
 import { flexbox } from '@mui/system';
 <link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital@1&family=Dancing+Script:wght@600&family=Lobster&display=swap" rel="stylesheet"></link>
 
-const Sidebar = () => {
+const Sidebar = ({places}) => {
   const [type,setType] = useState("restaurants")
   const [rating,setRating] = useState("")
 
-  const places = [
-    { name : "Agra"},
-    { name : "Mathura"},
-    { name : "Gwalior"},
-    { name : "Delhi"},  
-    { name : "Delhi"},  
-    { name : "Delhi"},  
-    { name : "Delhi"},  
-    { name : "Delhi"},  
-    { name : "Delhi"},  
-    { name : "Delhi"},  
-    { name : "Delhi"},  
-    { name : "Delhi"},  
-    { name : "Delhi"},  
-    { name : "Delhi"},  
-    { name : "Delhi"},  
-    { name : "Delhi"},  
-    { name : "Delhi"},  
-
-  ];
 
   return (
     <div>
