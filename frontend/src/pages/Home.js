@@ -11,14 +11,18 @@ const Home = () => {
 
   const [places, setPlaces] = useState([]);
 
+  const [coordinates, setCoordinates] = useState({lat:0 , lng:0});
+  // const [bounds, setBounds] = useState(null);
+
   useEffect(() => {
-    getPlacesData()
+
+    getPlacesData(coordinates.lat, coordinates.lng)
       .then((data) => {
         console.log(data);
         setPlaces(data);
       })
 
-  }, []);
+  }, [coordinates]);
 
 
   return (
@@ -28,13 +32,16 @@ const Home = () => {
         <Grid item xs={12} md={4}>
 
           <div className='sidebar_container'>
-            <Sidebar />
+            <Sidebar places={places} />
           </div>
         </Grid>
         <Grid item xs={12} md={8}>
 
           <div className='map_container'>
-            <Mapbox />
+            <Mapbox 
+              setCoordinates={setCoordinates}
+              coordinates={coordinates}
+            />
           </div>
         </Grid>
 

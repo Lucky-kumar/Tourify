@@ -15,7 +15,7 @@ import "./styles/Mapbox.css"
 const TOKEN = process.env.REACT_APP_MAPBOX_ACCESS_TOKEN;
 
 
-const Mapbox = () => {
+const Mapbox = ({setCoordinates, coordinates}) => {
   const email = "test@se.com"
   const [pins, setPins] = useState([]);
   const [currentPlaceId, setCurrentPlaceId] = useState(null)
@@ -89,6 +89,10 @@ const Mapbox = () => {
       mapboxAccessToken={TOKEN}
       onViewportChange={nextViewport => setViewport(nextViewport)}
       onContextMenu={handleRightClick}
+      onMove={(e) => {
+        console.log(e.viewState.latitude);
+        setCoordinates({lat: e.viewState.latitude, lng: e.viewState.longitude})
+      }}
     >
       {pins.map(p => (
         <>
