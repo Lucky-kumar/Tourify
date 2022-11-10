@@ -1,11 +1,11 @@
 
-import  Typography  from '@mui/material/Typography';
-import  Box  from '@mui/material/Box';
-import  Rating  from '@mui/material/Rating';
+import Typography from '@mui/material/Typography';
+import Box from '@mui/material/Box';
+import Rating from '@mui/material/Rating';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import PhoneIcon from '@mui/icons-material/Phone';
 import { Button, CardActions, Card, CardMedia, CardContent, Chip } from '@mui/material';
-import "./styles/PlaceCards.css"  
+import "./styles/PlaceCards.css"
 
 const PlaceCards = ({ place }) => {
 
@@ -15,7 +15,7 @@ const PlaceCards = ({ place }) => {
     <Card elevation={6}>
       <CardMedia
         style={{ height: 350 }}
-        image={place.photo ? place.photo.images.large.url : 'https./.....'}
+        image={place.photo ? place.photo.images.large.url : 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80'}
         title={place.name}
       />
       <CardContent>
