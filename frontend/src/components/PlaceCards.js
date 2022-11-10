@@ -9,7 +9,6 @@ import "./styles/PlaceCards.css"
 
 const PlaceCards = ({ place }) => {
 
-  // if(selected) refProp?.current?.scrollIntoView({behavior:"smooth",block:"start"})
 
   return (
     <Card elevation={6}>
