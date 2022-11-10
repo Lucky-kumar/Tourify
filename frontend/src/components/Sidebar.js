@@ -3,7 +3,6 @@ import "./styles/Sidebar.css"
 import  Typography  from '@mui/material/Typography';
 import { CircularProgress, FormControl, InputLabel, MenuItem, Select, Grid } from '@mui/material';
 import PlaceCards from './PlaceCards';
-import { flexbox } from '@mui/system';
 <link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital@1&family=Dancing+Script:wght@600&family=Lobster&display=swap" rel="stylesheet"></link>
 
 const Sidebar = ({places}) => {
