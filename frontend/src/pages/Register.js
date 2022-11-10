@@ -8,6 +8,7 @@ import people from "../pages/images/peoplee.webp"
 import {Link} from 'react-router-dom'
 const Register = () => {
   return (
+    <div className='register_body'>
     <div className="page">
       <div className="images" style={{ display: "flex", flexWrap: "wrap", justifyContent: "space-between" }}>
       <img src={cloud} alt="" className="cloud image" style={{left:"600px", top:"20px"}}/>
@@ -44,7 +45,7 @@ const Register = () => {
 
             {/* </Link> */}
 
-            <h4>Or</h4>
+            <h4 className='google_option'>Or</h4>
 
             <div style={{
             color: "red",
@@ -62,10 +63,11 @@ const Register = () => {
           </div>
         </form>
 
-        <Link to={'/Login.js'}>
+        <Link to={'/Login'}>
         <div style={{color:"blue", marginTop:"7px"}}>Login Now</div>
         </Link>
       </div>
+    </div>
     </div>
   )
 }
