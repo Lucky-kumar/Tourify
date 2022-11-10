@@ -5,6 +5,9 @@
 
 .login_body {
     background-color: rgb(186, 243, 243);
+    width: 100vw;
+    height: 100vh;
+
 }
 
 .form {
@@ -30,7 +33,7 @@
     border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-.loginForm {
+.loginForm{
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
