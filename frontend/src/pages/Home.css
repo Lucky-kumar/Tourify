@@ -1,0 +1,9 @@
+.map_container{
+    position: relative;
+    background-color: red;
+
+}
+
+.sidebar_container{
+    position: absolute;
+}

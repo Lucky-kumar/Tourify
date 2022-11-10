@@ -84,7 +84,7 @@ const Mapbox = () => {
   return (
     <Map
       initialViewState={viewport}
-      style={{ width: "100vw", height: "100vh" }}
+      style={{ width: "70w", height: "100vh" }}
       mapStyle="mapbox://styles/mapbox/streets-v9"
       mapboxAccessToken={TOKEN}
       onViewportChange={nextViewport => setViewport(nextViewport)}
