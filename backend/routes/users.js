@@ -48,4 +48,13 @@ router.post("/login", async (req, res) => {
     }
 });
 
+router.get("/:id", async (req, res) => {
+    try {
+        const user = await User.findById(req.params.id);
+        res.status(200).json(user);
+    } catch (err) {
+        console.log(err)
+    }
+})
+
 module.exports = router;

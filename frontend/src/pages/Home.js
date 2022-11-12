@@ -4,7 +4,6 @@ import Mapbox from './../components/Mapbox';
 import Navbar from './../components/Navbar'
 import Sidebar from '../components/Sidebar';
 import { Grid } from '@mui/material';
-import { flexbox } from '@mui/system';
 import { getPlacesData } from '../api';
 
 const Home = () => {
@@ -41,7 +40,7 @@ const Home = () => {
 
   return (
     <div>
-      {/* <Navbar/> */}
+      <Navbar/>
       <Grid container spacing={1} style={{ width: '100%' }}>
         <Grid item xs={12} md={4}>
 
