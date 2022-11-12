@@ -1,0 +1,61 @@
+
+.Not_Found_body {
+    background-color: rgb(63, 53, 53);
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    color: white;
+  
+    
+}
+
+.Error_404{
+    font-size: 12em;
+    color:rgb(241, 202, 9);
+    vertical-align: center; 
+   
+    /* width: 50vw;
+    height: 30vh;   
+    background: url("./images/404.jpg");
+    text-align: center; */
+}
+
+
+
+.Opps{
+    text-align: center;
+    margin: 23px;
+    font-size: 35px;
+}
+
+.Msg{
+    text-align: center;
+    margin: 40px;
+    font-size: 20px;
+}
+
+.return{
+    font-family: josefin sans,sans-serif;
+    font-size: 14px;
+    text-decoration: none;
+    text-transform: uppercase;
+    background: 0 0;
+    color: #c9c9c9;
+    border: 2px solid #c9c9c9;
+    display: inline-block;
+    padding: 10px 25px;
+    font-weight: 700;
+    -webkit-transition: .2s all;
+    transition: .2s all;
+    text-align: center;
+    margin-left: 50em ;
+}
+
+.robot{
+    position: center;
+    margin-left: 40em;
+    background-color: black;
+
+
+}

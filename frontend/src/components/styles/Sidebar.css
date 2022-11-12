@@ -28,7 +28,7 @@ color: white;
 .sidebar_list {
     height: 75vh;
     overflow: auto;
-
+    /* margin-bottom: 10px; */
 }
 
 .title{

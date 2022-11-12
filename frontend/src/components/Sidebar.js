@@ -25,7 +25,7 @@ const Sidebar = ({ places, isLoading }) => {
                 <div style={{ display: "flex", flexDirection: "row", flexWrap: "wrap", justifyContent: "space-evenly", alignItems: "center" }}>
 
               <FormControl className="sidebar_formcontrol" >
-                <InputLabel className='heading' style={{ marginTop: "10px", textAlign: "center", color: "white", textDecoration: "none" }}>Type</InputLabel>
+                <InputLabel className='heading' style={{ marginTop: "10px", textAlign: "center", color: "white", borderBottom:"none" }}>Type</InputLabel>
                 <Select value={type} onChange={(e) => setType(e.target.value)} style={{ padding: "5px 20px", color: "white" }}>
                   <MenuItem className="menuvaule" value="restaurants">Restaurants</MenuItem>
                   <MenuItem className="menuvaule" value="hotels">Hotels</MenuItem>
@@ -34,7 +34,7 @@ const Sidebar = ({ places, isLoading }) => {
               </FormControl>
 
               <FormControl className="sidebar_formcontrol">
-                <InputLabel className='heading' style={{ margin: "10px auto", color: "white" }}>Rating</InputLabel>
+                <InputLabel className='heading' style={{ margin: "10px auto", color: "white",borderBottom:"none" }}>Rating</InputLabel>
                 <Select value={rating} onChange={(e) => setRating(e.target.value)} style={{ padding: "5px 20px", color: "white" }}>
                   <MenuItem className="menuvaule" value={0}>All</MenuItem>
                   <MenuItem className="menuvaule" value={3}>Above 3.0</MenuItem>
@@ -42,10 +42,12 @@ const Sidebar = ({ places, isLoading }) => {
                   <MenuItem className="menuvaule" value={4.5}>Above 4.5</MenuItem>
                 </Select>
               </FormControl>
-              <Grid container spacing={3} className="sidebar_list">
+              
+              <div style={{marginTop:"20px"}}>
+              <Grid container spacing={0} className="sidebar_list">
                 {
                   places?.map((place, i) => (
-                    <Grid item key={i} xs={12}>
+                    <Grid item key={i} xs={12} style={{marginBottom:"20px"}}>
                       <PlaceCards
                         place={place}
 
@@ -54,7 +56,8 @@ const Sidebar = ({ places, isLoading }) => {
                   ))
                 }
               </Grid>
-          </div>
+              </div>
+              </div>
             </>)}
 
         </div>

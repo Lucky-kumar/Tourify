@@ -6,6 +6,7 @@ import Register from './pages/Register';
 import Profile from './pages/Profile';
 import { useContext } from 'react';
 import { AuthContext } from './context/AuthContext';
+import Error from './pages/error404'
 
 function App() {
 
@@ -60,6 +61,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/profile" element={<Profile />} />
+          {/* <Route path="/error404" element={<Error />} /> */}
         </Routes>
       </BrowserRouter>
     </>

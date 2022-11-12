@@ -13,6 +13,7 @@ import "./styles/Mapbox.css"
 import { Paper } from '@mui/material';
 
 
+
 const TOKEN = process.env.REACT_APP_MAPBOX_ACCESS_TOKEN;
 
 
@@ -207,6 +208,7 @@ const Mapbox = ({ setCoordinates, coordinates, places }) => {
         <GeolocateControl style={{ marginLeft: 40 }} position="top-left" />
         <NavigationControl style={{ marginLeft: 40 }} position="top-left" />
       </>
+
     </Map>)
 }
 

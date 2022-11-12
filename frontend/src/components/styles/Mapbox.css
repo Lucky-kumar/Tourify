@@ -10,6 +10,7 @@
   input {
     border: none;
     border-bottom: 1px solid gray;
+
   }
   
   input::placeholder,
@@ -59,4 +60,6 @@
 
   .card_pointer{
     cursor: pointer;
+  .PopCard{
+    border: 1px solid #6e064c;
   }
