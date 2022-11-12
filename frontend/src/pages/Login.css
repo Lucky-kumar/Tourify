@@ -104,6 +104,16 @@ svg.icon {
     color: white;
 }
 
+.switch_register{
+    background: none;
+    border:0px;
+    font-size: 15px;
+    color: blue;
+    padding: 0;
+}
+.switch_register:hover{
+    cursor: pointer;
+}
 .image {
     background-color: transparent;
     position: fixed;
