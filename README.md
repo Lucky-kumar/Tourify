@@ -58,7 +58,6 @@ With this, users can add pins to their favourite places.<br><br>
 
 #
 **Setting Up the Project**<br><br>
-     **Our landing page is Sign In** <br> <br>
 
 **1. Clone the repo**<br>
 git clone https:https://github.com/Lucky-kumar/Tourify.git <br>
