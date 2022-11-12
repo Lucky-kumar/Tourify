@@ -29,6 +29,9 @@ const UserSchema = new mongoose.Schema(
     contact_number: {
       type: Number,
     },
+    pins: {
+      type : [String],
+  },
 
   },
   { timestamps: true }
