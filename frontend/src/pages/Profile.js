@@ -1,7 +1,7 @@
 import { Button, InputLabel } from '@mui/material'
 import { borderBottom } from '@mui/system'
 import React, { useContext } from 'react'
-
+import Navbar from './../components/Navbar'
 import "./Profile.css"
 import {useNavigate} from "react-router-dom"
 import { AuthContext } from './../context/AuthContext';
@@ -25,7 +25,9 @@ const Profile = () => {
     }
   }
 
-  return (
+  return (<>
+  
+    <Navbar/>
     <div className='profile_body'>
       <div className='user_profile'>
 
@@ -69,6 +71,7 @@ const Profile = () => {
         </div>
       </div>
     </div>
+    </>
   )
 }
 
