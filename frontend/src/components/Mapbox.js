@@ -10,12 +10,13 @@ import "../App.css"
 import axios from 'axios'
 import { format } from "timeago.js"
 import "./styles/Mapbox.css"
+import { Paper } from '@mui/material';
 
 
 const TOKEN = process.env.REACT_APP_MAPBOX_ACCESS_TOKEN;
 
 
-const Mapbox = ({setCoordinates, coordinates}) => {
+const Mapbox = ({ setCoordinates, coordinates, places }) => {
   const email = "test@se.com"
   const [pins, setPins] = useState([]);
   const [currentPlaceId, setCurrentPlaceId] = useState(null)
@@ -91,9 +92,33 @@ const Mapbox = ({setCoordinates, coordinates}) => {
       onContextMenu={handleRightClick}
       onMove={(e) => {
         console.log(e.viewState.latitude);
-        setCoordinates({lat: e.viewState.latitude, lng: e.viewState.longitude})
+        setCoordinates({ lat: e.viewState.latitude, lng: e.viewState.longitude })
       }}
     >
+      {places?.map((place, i) => (
+        <div
+          className="markerContainer"
+          lat={Number(place.latitude)}
+          lng={Number(place.longitude)}
+          key={i}
+        >
+          {
+
+            <Paper elevation={3} className="paper" >
+              <Typography className="Typography" variant="subtitle2" gutterBottom>
+                {place.name}
+              </Typography>
+              <img
+                className="alertpointer"
+                src={place.photo ? place.photo.images.large.url : 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80'}
+                alt={place.name}
+              />
+              <Rating size="small" value={Number(place.rating)} readOnly />
+            </Paper>
+          }
+        </div>
+      ))}
+
       {pins.map(p => (
         <>
 
@@ -116,12 +141,12 @@ const Mapbox = ({setCoordinates, coordinates}) => {
               closeOnClick={false}
               onClose={() => setCurrentPlaceId(null)}
             >
-              <div className="card" style={{backgroundColor :"transparent",width:"150px" }}>
-                <label style={{ color: "red", fontWeight:"bold",fontSize:"1.9em",textDecoration:"none"}} >Place</label>
-                <p className="place" style={{ color: "Black",fontSize:"1.3em",fontWeight:"bold"}} >{p.title}</p>
-                <label style={{ color: "red",fontWeight:"bold",fontSize:"1.9em"}} >Review</label>
-                <p className="desc" style={{color: "black",fontSize:"1.3em"}} >{p.desc}</p>
-                <label style={{ color: "red",fontWeight:"bold",fontSize:"1.9em"}}>Rating</label>
+              <div className="card" style={{ backgroundColor: "transparent", width: "150px" }}>
+                <label style={{ color: "red", fontWeight: "bold", fontSize: "1.9em", textDecoration: "none" }} >Place</label>
+                <p className="place" style={{ color: "Black", fontSize: "1.3em", fontWeight: "bold" }} >{p.title}</p>
+                <label style={{ color: "red", fontWeight: "bold", fontSize: "1.9em" }} >Review</label>
+                <p className="desc" style={{ color: "black", fontSize: "1.3em" }} >{p.desc}</p>
+                <label style={{ color: "red", fontWeight: "bold", fontSize: "1.9em" }}>Rating</label>
                 <Rating
                   name="read-only"
                   value={p.rating}
@@ -129,7 +154,7 @@ const Mapbox = ({setCoordinates, coordinates}) => {
                   readOnly
                 />
 
-                <span className="date" style={{textAlign:"center", color:"grey"}} >{format(p.createdAt)}</span>
+                <span className="date" style={{ textAlign: "center", color: "grey" }} >{format(p.createdAt)}</span>
               </div>
             </Popup>
           }

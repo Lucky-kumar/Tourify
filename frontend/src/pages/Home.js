@@ -50,6 +50,7 @@ const Home = () => {
             <Mapbox
               setCoordinates={setCoordinates}
               coordinates={coordinates}
+              places={places}
             />
           </div>
         </Grid>
