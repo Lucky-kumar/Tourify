@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext, useState } from 'react'
 import './Login.css'
 import GoogleIcon from '@mui/icons-material/Google';
 // import CloudIcon from '@mui/icons-material/Cloud';
@@ -6,9 +6,45 @@ import people from './images/team-4423339.svg'
 import image1 from './images/computer-6242945.svg'
 import plane from './images/airplane-2434022.png'
 import cloud from './images/cloud-303182.svg'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
+import { AuthContext } from '../context/AuthContext';
+import axios from 'axios';
 
 const Login = () => {
+
+  const [values, setValues] = useState({
+    email: "",
+    password: "",
+  });
+
+  const { loading, error, dispatch } = useContext(AuthContext);
+
+  if (error) {
+    console.log(error.message);
+  }
+
+  console.log(values);
+
+  const navigate = useNavigate();
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    dispatch({ type: "LOGIN_START" });
+    try {
+      const res = await axios.post("http://localhost:8000/api/users/login", values);
+      dispatch({ type: "LOGIN_SUCCESS", payload: res.data.details });
+      navigate("/home")
+    } catch (err) {
+      dispatch({ type: "LOGIN_FAILURE", payload: err.response.data });
+    }
+  };
+
+  const handleChange = (e) => {
+    setValues({ ...values, [e.target.name]: e.target.value });
+  };
+
+  if (loading) return "Loading...";
+
   return (
     <div className='login_body'>
       <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "space-between" }}>
@@ -35,15 +71,17 @@ const Login = () => {
             <input className='IB' type="text"
               name="email"
               placeholder="Email"
+              onChange={handleChange}
               required
             />
             <input className='IB' type="password"
               name="password"
               placeholder="Password"
+              onChange={handleChange}
               required
             />
             {/* <Link to={}> */}
-            <button type="submit" className='btn'>Login</button>
+            <button type="submit" className='btn' onClick={handleSubmit}>Login</button>
             {/* </Link> */}
             <h5
               style={{

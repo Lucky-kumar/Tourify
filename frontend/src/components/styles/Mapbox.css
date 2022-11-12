@@ -38,3 +38,25 @@
     cursor: pointer;
     border: solid 2px tomato;
   }
+
+  .card_paper{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100px;
+  }
+
+  .card_markerContainer{
+    position: absolute;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+  }
+
+  .card_markerContainer:hover{
+    z-index: 2;
+  }
+
+  .card_pointer{
+    cursor: pointer;
+  }
