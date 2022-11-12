@@ -35,7 +35,8 @@ There is a basic landing page that is my Login page , you can always navigate to
 #
 **2.Home page** <br><br>
 After logging in you will see a home screen and you can view all the all pins .<br><br>
-![Home Page](https://user-images.githubusercontent.com/82212464/201488833-b73270a6-c1de-4bc9-a580-085213418c35.jpeg)
+![Home page](https://user-images.githubusercontent.com/78373491/201491488-71242c50-2603-4224-b211-7a323b61ddb9.png)
+
 #
 **3.Navbar** <br><br>
 The navbar at the top contains a home icon and other options like  my profile and logout button,all of these are pretty much self explanatory .<br><br>
@@ -58,13 +59,12 @@ With this, users can add pins to their favourite places.<br><br>
 
 #
 **Setting Up the Project**<br><br>
-     **Our landing page is Sign In** <br> <br>
 
 **1. Clone the repo**<br>
 git clone https:https://github.com/Lucky-kumar/Tourify.git <br>
 
-**2. Instal npm using commad**<br>
-commad : npm install <br>
+**2. Instal npm using command**<br>
+command : npm install <br>
 
 **3. Start npm**<br>
 
