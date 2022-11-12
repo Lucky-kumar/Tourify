@@ -7,7 +7,9 @@ import { AuthContext } from './../context/AuthContext';
 const Profile = () => {
 
   const { user } = useContext(AuthContext)
-  console.log("user: " + user)
+
+  
+
 
 
   return (
@@ -44,19 +46,25 @@ const Profile = () => {
             <InputLabel className='profile_labels'>Address</InputLabel>
             <div></div>
           </div>
-          <hr style={{ width: "90%", borderTop: "2px solid gray", borderBottom: "0px" }} />
+
+          <div className='info'>
+            <InputLabel className='profile_labels'>Premium Status</InputLabel>
+            <div></div>
+          </div>
+
+          {/* <hr style={{ width: "90%", borderTop: "2px solid gray", borderBottom: "0px" }} />
           <div className='info'>
             <InputLabel className='profile_labels'>Pins</InputLabel>
             <div></div>
           </div>
-          <div>
-            <Button className='LogOut' styles={{ marginTop: "20px", marginBottom: "20px" }}>Log Out</Button></div>
-        </div>
+          <div> */}
 
-
-
+          <Button className='LogOut' styles={{ marginTop: "20px", marginBottom: "20px" }}>Log Out</Button></div>
       </div>
-    </div>
+
+
+
+    </div >
   )
 }
 
