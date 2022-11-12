@@ -109,7 +109,7 @@ const Login = () => {
               margin: "10px",
               padding: "10px",
               color: "blue",
-            }}>Register now</div>
+            }}><button className='switch_register'>Register now</button></div>
 
           </Link>
         </div>

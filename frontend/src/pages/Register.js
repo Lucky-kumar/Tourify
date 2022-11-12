@@ -115,7 +115,7 @@ const Register = () => {
           </form>
 
           <Link to={'/Login'}>
-            <div style={{ color: "blue", marginTop: "7px" }}>Login Now</div>
+            <div style={{ color: "blue", marginTop: "7px"}}><button className='switch_login'>Login Now</button></div>
           </Link>
         </div>
       </div>
