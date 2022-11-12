@@ -42,14 +42,15 @@ Button{
     font-weight: 500;
     font-size: 19px;
     line-height: 1.75;
-    background: transparent;
-
-
-
-    
+    background: transparent;    
 }
 
 button :hover{
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
     background-color: coral;
+}
+
+.info{
+   border-bottom: none;
+   font-size: 24px; 
 }
