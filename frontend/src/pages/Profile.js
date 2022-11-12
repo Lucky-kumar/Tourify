@@ -1,6 +1,6 @@
 import { Button, InputLabel } from '@mui/material'
 import React, { useContext } from 'react'
-mport Navbar from './../components/Navbar'
+import Navbar from './../components/Navbar'
 import "./Profile.css"
 import {useNavigate} from "react-router-dom"
 import { AuthContext } from './../context/AuthContext';
