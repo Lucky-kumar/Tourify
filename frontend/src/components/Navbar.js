@@ -1,7 +1,8 @@
 import React, { useContext } from 'react'
 import "./styles/Navbar.css"
 import { AuthContext } from './../context/AuthContext';
-import { useNavigate } from 'react-router-dom';
+
+import { useNavigate,Link } from 'react-router-dom';
 <link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital@1&family=Dancing+Script:wght@600&family=Lobster&display=swap" rel="stylesheet"></link>
 
 const Navbar = () => {
@@ -19,7 +20,6 @@ const Navbar = () => {
     dispatch({ type: "LOGOUT" });
     try {
       navigate("/login");
-
     } catch (err) {
       console.log(err);
     }
@@ -35,10 +35,10 @@ const Navbar = () => {
               <li >Tourify </li>
             </div>
             <div className='sec'>
-              <li><a href='/'>Home</a></li>
-              <li><a href='/profile'>Profile</a></li>
+              <li><Link to={`/home`}>Home</Link></li>
+              <li><Link to={`/profile`}>Profile</Link></li>
               <li>
-                <button onClick={handleLogout}>Log Out</button>
+                <button className="navbar_button" onClick={handleLogout}>Log Out</button>
               </li>
             </div>
 
@@ -49,4 +49,4 @@ const Navbar = () => {
   )
 }
 
-export default Navbar
+export default Navbar
