@@ -13,6 +13,7 @@ const Home = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [type, setType] = useState("restaurants")
   const [rating, setRating] = useState("")
+  const [filteredPlaces, setFilteredPlaces] = useState([0])
 
 
   const [coordinates, setCoordinates] = useState({ lat: 0, lng: 0 });
@@ -26,11 +27,16 @@ const Home = () => {
       .then((data) => {
         console.log(data);
         setPlaces(data);
+        setFilteredPlaces([])
         setIsLoading(false);
       })
 
   }, [coordinates, type]);
 
+  useEffect(() => {
+    const filteredPLaces = places.filter((place) => place.rating > rating)
+    setFilteredPlaces(filteredPLaces);
+  }, [rating])
 
 
   return (
@@ -41,7 +47,7 @@ const Home = () => {
 
           <div className='sidebar_container'>
             <Sidebar
-              places={places}
+              places={filteredPlaces.length ? filteredPlaces : places}
               isLoading={isLoading}
               type={type}
               setType={setType}
@@ -56,7 +62,7 @@ const Home = () => {
             <Mapbox
               setCoordinates={setCoordinates}
               coordinates={coordinates}
-              places={places}
+              places={filteredPlaces.length ? filteredPlaces : places}
             />
           </div>
         </Grid>
