@@ -32,7 +32,7 @@ const Home = () => {
 
   return (
     <div>
-      {/* <Navbar/> */}
+      <Navbar/>
       <Grid container spacing={1} style={{ width: '100%' }}>
         <Grid item xs={12} md={4}>
 

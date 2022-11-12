@@ -13,12 +13,12 @@ const Navbar = () => {
               <li >Tourify </li>
             </div>
             <div className='sec'>
-              <li><a href='#'>Home</a></li>
-              <li><a href='#'>About Us</a></li>
-              <li><a href='#'>Contact Us</a></li>
-              <li><a href='#'>Profile</a></li>
-              <li>
-                <button>Log Out</button>
+              <li><a href='./'>Home</a></li>
+              {/* <li><a href='#'>About us </a></li>
+              <li><a href='#'>Contact Us</a></li> */}
+              <li><a href='./Profile'>Profile</a></li>
+              <li><a href='./login'>
+                <button className='LG'> Log Out</button></a>
               </li>
             </div>
 
