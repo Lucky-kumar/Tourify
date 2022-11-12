@@ -4,7 +4,8 @@
 }
 
 .login_body {
-    background-color: rgb(186, 243, 243);
+    /* background-color: rgb(186, 243, 243); */
+    background: linear-gradient(to right bottom, rgb(186, 243, 243) 63%, rgba(69, 225, 225, 0.74) 55.3%);
     width: 100vw;
     height: 100vh;
 
