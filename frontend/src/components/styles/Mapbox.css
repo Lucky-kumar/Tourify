@@ -60,6 +60,8 @@
 
   .card_pointer{
     cursor: pointer;
+  }
+  
   .PopCard{
     border: 1px solid #6e064c;
   }

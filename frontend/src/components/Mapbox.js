@@ -34,7 +34,7 @@ const Mapbox = ({ setCoordinates, coordinates, places }) => {
     // latitude: 26.249354,
     longitude: "-0.07",
     latitude: "51.50",
-    zoom: 14
+    zoom: 17
 
   })
 
