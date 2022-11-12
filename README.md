@@ -63,8 +63,8 @@ With this, users can add pins to their favourite places.<br><br>
 **1. Clone the repo**<br>
 git clone https:https://github.com/Lucky-kumar/Tourify.git <br>
 
-**2. Instal npm using commad**<br>
-commad : npm install <br>
+**2. Instal npm using command**<br>
+command : npm install <br>
 
 **3. Start npm**<br>
 
