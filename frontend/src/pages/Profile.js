@@ -43,17 +43,17 @@ const { user, dispatch } = useContext(AuthContext)
         <div className='content'>
           <div className='info'>
             <InputLabel className='profile_labels'>Name</InputLabel>
-            <div className=''>{data.name}</div>
+            <div className='profile_data'>{data.name}</div>
           </div>
 
           <div className='info'>
             <InputLabel className='profile_labels'>Contact Number</InputLabel>
-            <div>{data.contact_number}</div>
+            <div className='profile_data'>{data.contact_number}</div>
           </div>
 
           <div className='info'>
             <InputLabel className='profile_labels'>Email Id</InputLabel>
-            <div>{data.email}</div>
+            <div className='profile_data'>{data.email}</div>
           </div>
 
           {/* <div className='info'>
@@ -63,7 +63,7 @@ const { user, dispatch } = useContext(AuthContext)
 
           <div className='info'>
             <InputLabel className='profile_labels'>Address</InputLabel>
-            <div>{data.address}</div>
+            <div className='profile_data'>{data.address}</div>
           </div>
 
           {/* <div className='info'>
@@ -75,12 +75,13 @@ const { user, dispatch } = useContext(AuthContext)
 
           <div className='info'>
             <InputLabel className='profile_labels'>Pins</InputLabel>
-            <div></div>
+            <div className='profile_data'></div>
           </div>
-        <div> */}
+        <div> 
 
           <Button className='LogOut' styles={{ marginTop: "20px", marginBottom: "20px" }} onClick={handleLogout}>Log Out</Button></div>
       </div>
+    </div>
     </div>
   </>
   )
