@@ -3,13 +3,21 @@ import { borderBottom } from '@mui/system'
 import React, { useContext } from 'react'
 import "./Profile.css"
 import { AuthContext } from './../context/AuthContext';
+import useFetch from '../hooks/UseFetch';
 
 const Profile = () => {
 
   const { user } = useContext(AuthContext)
 
-  
+  const { data, loading, error, reFetch } = useFetch(`http://localhost:8000/api/users/${user}`)
 
+  if (loading) {
+    return "Loading..."
+  }
+
+  if (error) {
+    console.log(error);
+  }
 
 
   return (
@@ -19,38 +27,33 @@ const Profile = () => {
         <div className='content'>
           <div className='info'>
             <InputLabel className='profile_labels'>Name</InputLabel>
-            <div className=''></div>
-          </div>
-
-          <div className='info'>
-            <InputLabel className='profile_labels'>Address</InputLabel>
-            <div></div>
+            <div className=''>{data.name}</div>
           </div>
 
           <div className='info'>
             <InputLabel className='profile_labels'>Contact Number</InputLabel>
-            <div></div>
+            <div>{data.contact_number}</div>
           </div>
 
           <div className='info'>
             <InputLabel className='profile_labels'>Email Id</InputLabel>
-            <div></div>
+            <div>{data.email}</div>
           </div>
 
-          <div className='info'>
+          {/* <div className='info'>
             <InputLabel className='profile_labels'>Location</InputLabel>
             <div></div>
-          </div>
+          </div> */}
 
           <div className='info'>
             <InputLabel className='profile_labels'>Address</InputLabel>
-            <div></div>
+            <div>{data.address}</div>
           </div>
 
-          <div className='info'>
+          {/* <div className='info'>
             <InputLabel className='profile_labels'>Premium Status</InputLabel>
-            <div></div>
-          </div>
+            <div>{data.premium_status}</div>
+          </div> */}
 
           {/* <hr style={{ width: "90%", borderTop: "2px solid gray", borderBottom: "0px" }} />
           <div className='info'>
