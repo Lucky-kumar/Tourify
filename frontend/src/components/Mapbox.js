@@ -10,6 +10,8 @@ import "../App.css"
 import axios from 'axios'
 import { format } from "timeago.js"
 import "./styles/Mapbox.css"
+
+import Directions from './Directions';
 import { Paper } from '@mui/material';
 
 
@@ -208,7 +210,6 @@ const Mapbox = ({ setCoordinates, coordinates, places }) => {
         <GeolocateControl style={{ marginLeft: 40 }} position="top-left" />
         <NavigationControl style={{ marginLeft: 40 }} position="top-left" />
       </>
-
     </Map>)
 }
 

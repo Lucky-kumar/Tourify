@@ -103,12 +103,13 @@ const Login = () => {
             </div>
           </form>
           <Link to={`/register`}>
-            <div style={{
-              backgroundColor: "transparent",
-              margin: "10px",
-              padding: "10px",
-              color: "blue"
-            }}>Register now</div>
+          <div style={{
+            backgroundColor: "transparent",
+            margin: "10px",
+            padding: "10px",
+            color: "blue",
+          }}>Register now</div>
+
           </Link>
         </div>
 
