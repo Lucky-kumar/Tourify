@@ -1,0 +1,55 @@
+.profile_body{
+    /* background-color: rgb(186, 243, 243); */
+    width: 100vw;
+    height: 100vh;
+    
+}
+
+
+
+.user_profile ul{
+    overflow: auto;
+    
+}
+
+.profile_Data{
+    font-size: 45px;
+    text-align: center;
+    margin: 30px;
+    margin-left: 49px;
+    text-decoration: none;
+}
+
+.user_profile li a{
+    text-decoration: none;
+}
+
+.content{
+    font-size: 45px;
+    text-align: center;
+    margin: 30px;
+    margin-left: 49px;
+    text-decoration: none;
+}
+
+Button{
+    background-color:rgb(132, 21, 76);  
+    /* border: none; */
+    color: white;
+    padding: 6px 8px;
+    border-radius: 14px;
+    box-sizing: border-box;
+    font-weight: 500;
+    font-size: 19px;
+    line-height: 1.75;
+    background: transparent;
+
+
+
+    
+}
+
+button :hover{
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    background-color: coral;
+}

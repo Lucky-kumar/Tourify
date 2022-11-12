@@ -10,6 +10,7 @@ import "../App.css"
 import axios from 'axios'
 import { format } from "timeago.js"
 import "./styles/Mapbox.css"
+import { color } from '@mui/system';
 
 
 const TOKEN = process.env.REACT_APP_MAPBOX_ACCESS_TOKEN;
@@ -110,18 +111,18 @@ const Mapbox = ({setCoordinates, coordinates}) => {
 
           </Marker>
           {p._id === currentPlaceId &&
-            <Popup longitude={p.lng} latitude={p.lat}
+            <Popup  className ="PopCard"longitude={p.lng} latitude={p.lat}
               anchor="bottom"
               closeButton={true}
               closeOnClick={false}
               onClose={() => setCurrentPlaceId(null)}
             >
               <div className="card" style={{backgroundColor :"transparent",width:"150px" }}>
-                <label style={{ color: "red", fontWeight:"bold",fontSize:"1.9em",textDecoration:"none"}} >Place</label>
-                <p className="place" style={{ color: "Black",fontSize:"1.3em",fontWeight:"bold"}} >{p.title}</p>
-                <label style={{ color: "red",fontWeight:"bold",fontSize:"1.9em"}} >Review</label>
-                <p className="desc" style={{color: "black",fontSize:"1.3em"}} >{p.desc}</p>
-                <label style={{ color: "red",fontWeight:"bold",fontSize:"1.9em"}}>Rating</label>
+                <label style={{ color: "tomato", fontWeight:"bold",fontSize:"16px" , borderBottom:"none"}} >Place</label>
+                <p className="place" style={{ color: "grey",fontSize:"15px",fontWeight:"bold"}} >{p.title}</p>
+                <label style={{ color: "tomato",fontWeight:"bold",fontSize:"16px",borderBottom:"none"}} >Review</label>
+                <p className="desc" style={{color: "black",fontSize:"15px"}} >{p.desc}</p>
+                <label style={{ color: "tomato",fontWeight:"bold",fontSize:"16px",borderBottom:"none"}}>Rating</label>
                 <Rating
                   name="read-only"
                   value={p.rating}
@@ -147,18 +148,18 @@ const Mapbox = ({setCoordinates, coordinates}) => {
         >
           <div>
             <form className='pin_form' onSubmit={handleSubmit}>
-              <label>Title</label>
+              <label style ={{borderBottom:"none"}}>Title</label>
               <input
                 placeholder="Enter a title"
                 autoFocus
                 onChange={(e) => setTitle(e.target.value)}
               />
-              <label>Description</label>
+              <label style ={{borderBottom:"none"}}>Description</label>
               <textarea
                 placeholder="Say us something about this place."
                 onChange={(e) => setDesc(e.target.value)}
               />
-              <label>Rating</label>
+              <label style ={{borderBottom:"none"}}>Rating</label>
               <select onChange={(e) => setStar(e.target.value)}>
                 <option value="1">1</option>
                 <option value="2">2</option>
