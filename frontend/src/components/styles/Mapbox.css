@@ -10,6 +10,7 @@
   input {
     border: none;
     border-bottom: 1px solid gray;
+
   }
   
   input::placeholder,
@@ -37,4 +38,8 @@
     background-color: tomato;
     cursor: pointer;
     border: solid 2px tomato;
+  }
+
+  .PopCard{
+    border: 1px solid #6e064c;
   }
