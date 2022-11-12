@@ -71,9 +71,27 @@ commad : npm install <br>
 #
 **Members**<br>
 **Group Number 9**<br>
-1.[Dipti Singh](2020IMT-029) - Login Page, Profile Page <br>
-2.[Ekta Kumari](2020IMT-032) - Register Page, Navbar <br>
-3.[Lucky Kumar](2020IMT-051) - Backend, MapBox, Sidebar, Add Pin <br>
+1.[Dipti Singh](2020IMT-029)<br> 
+**a)** Dsigned login page<br>
+**b)** Added marker and popup on map<br>
+**c)** Implemented filter and rating on places<br>
+**d)** Implemented logout,register with backend<br>
+**e)** Implemented register with backend<br>
+
+2.[Ekta Kumari](2020IMT-032)<br>
+**a)** Designed register page<br>
+**b)** Made navbar<br>
+**c)** Designed cards<br>
+**d)** Designed profile page<br>
+**e)** Designed 404 page<br>
+
+3.[Lucky Kumar](2020IMT-051)<br>
+**a)** Made backend<br>
+**b)** Integrated mapbox <br>
+**c)** Fetched data from api<br>
+**d)** Implemented login with backend<br>
+**e)** state context and custom hooks<br>
+
 4.[Priyankaa Sarkar](2020IMT-075)<br>
 
 
