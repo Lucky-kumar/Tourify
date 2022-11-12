@@ -8,6 +8,7 @@ body {
     height: 100%;
     /* background-color: purple; */
     background-color: #6e064c;
+    background: linear-gradient(to right bottom, #6e064c 70%, #bb589a 50.3%);
 color: white;
   
 }
