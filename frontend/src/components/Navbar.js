@@ -1,7 +1,8 @@
 import React, { useContext } from 'react'
 import "./styles/Navbar.css"
 import { AuthContext } from './../context/AuthContext';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate,Link } from 'react-router-dom';
+
 <link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital@1&family=Dancing+Script:wght@600&family=Lobster&display=swap" rel="stylesheet"></link>
 
 const Navbar = () => {
@@ -34,8 +35,8 @@ const Navbar = () => {
               <li >Tourify </li>
             </div>
             <div className='sec'>
-              <li><a href='#'>Home</a></li>
-              <li><a href='#'>Profile</a></li>
+              <li><Link to={`/home`}>Home</Link></li>
+              <li><Link to={`/profile`}>Profile</Link></li>
               <li>
                 <button onClick={handleLogout}>Log Out</button>
               </li>

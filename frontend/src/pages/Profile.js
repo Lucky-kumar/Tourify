@@ -46,9 +46,6 @@ const Profile = () => {
           <div>
           <Button className='LogOut' styles={{marginTop:"20px", marginBottom:"20px"}}>Log Out</Button></div>
           </div>
-
-        
-
       </div>
     </div>
   )
