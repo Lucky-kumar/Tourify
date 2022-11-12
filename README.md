@@ -71,10 +71,12 @@ commad : npm install <br>
 #
 **Members**<br>
 **Group Number 9**<br>
-1.[Dipti Singh](2020IMT-029)<br>
-2.[Ekta Kumari](2020IMT-032)<br>
-3.[Lucky Kumar](2020IMT-051)<br>
+1.[Dipti Singh](2020IMT-029) - Login Page, Profile Page <br>
+2.[Ekta Kumari](2020IMT-032) - Register Page, Navbar <br>
+3.[Lucky Kumar](2020IMT-051) - Backend, MapBox, Sidebar, Add Pin <br>
 4.[Priyankaa Sarkar](2020IMT-075)<br>
+
+
 
 
 
