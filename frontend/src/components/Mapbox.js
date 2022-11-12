@@ -42,7 +42,7 @@ const Mapbox = ({ setCoordinates, coordinates, places }) => {
   useEffect(() => {
     const getPins = async () => {
       try {
-        const res = await axios.get("/pins");
+        const res = await axios.get("http://localhost:8000/api/pins");
         setPins(res.data);
 
       } catch (err) {
@@ -78,7 +78,7 @@ const Mapbox = ({ setCoordinates, coordinates, places }) => {
     };
 
     try {
-      const res = await axios.post("/pins", newPin);
+      const res = await axios.post("http://localhost:8000/api/pins", newPin);
       setPins([...pins, res.data]);
       setNewPlace(null);
     } catch (err) {

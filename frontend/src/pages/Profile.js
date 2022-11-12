@@ -1,11 +1,25 @@
 import { Button, InputLabel } from '@mui/material'
 import { borderBottom } from '@mui/system'
 import React, { useContext } from 'react'
-import Navbar from './../components/Navbar'
+mport Navbar from './../components/Navbar'
 import "./Profile.css"
 import {useNavigate} from "react-router-dom"
 import { AuthContext } from './../context/AuthContext';
+
+
 const Profile = () => {
+
+const { user } = useContext(AuthContext)
+
+  const { data, loading, error, reFetch } = useFetch(`http://localhost:8000/api/users/${user}`)
+
+  if (loading) {
+    return "Loading..."
+  }
+
+  if (error) {
+    console.log(error);
+  }
 
   const navigate = useNavigate();
 
@@ -34,34 +48,36 @@ const Profile = () => {
         <div className='content'>
           <div className='info'>
             <InputLabel className='profile_labels'>Name</InputLabel>
-            <div className=''></div>
-          </div>
-
-          <div className='info'>
-            <InputLabel className='profile_labels'>Address</InputLabel>
-            <div></div>
+            <div className=''>{data.name}</div>
           </div>
 
           <div className='info'>
             <InputLabel className='profile_labels'>Contact Number</InputLabel>
-            <div></div>
+            <div>{data.contact_number}</div>
           </div>
 
           <div className='info'>
             <InputLabel className='profile_labels'>Email Id</InputLabel>
-            <div></div>
+            <div>{data.email}</div>
           </div>
 
-          <div className='info'>
+          {/* <div className='info'>
             <InputLabel className='profile_labels'>Location</InputLabel>
             <div></div>
-          </div>
+          </div> */}
 
           <div className='info'>
             <InputLabel className='profile_labels'>Address</InputLabel>
-            <div></div>
+            <div>{data.address}</div>
           </div>
-          <hr style={{ width: "90%", borderTop: "2px solid gray", borderBottom: "0px" }} />
+
+          {/* <div className='info'>
+            <InputLabel className='profile_labels'>Premium Status</InputLabel>
+            <div>{data.premium_status}</div>
+          </div> */}
+
+          {/* <hr style={{ width: "90%", borderTop: "2px solid gray", borderBottom: "0px" }} />
+
           <div className='info'>
             <InputLabel className='profile_labels'>Pins</InputLabel>
             <div></div>
