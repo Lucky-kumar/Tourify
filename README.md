@@ -44,10 +44,12 @@ This is a page where users can see all their personal information, like contact 
 **Setting Up the Project**<br><br>
      **Our landing page is Sign In** <br> <br>
      ![Sign_in]<br><br>
-**1. Clone the repo**<br>
-git clone https:https://github.com/Lucky-kumar/Tourify.git
-**2. Instal npm using commad**<br>
-commad : npm install
+     
+**1. Clone the repo**<br><br>
+git clone https:https://github.com/Lucky-kumar/Tourify.git <br><br>
+
+**2. Instal npm using commad**<br><br>
+commad : npm install <br>
 
 **3.Start npm**<br>
 
