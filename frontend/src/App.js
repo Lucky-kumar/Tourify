@@ -14,7 +14,7 @@ function App() {
     const { user } = useContext(AuthContext);
 
     if (!user) {
-      return <Navigate to="/home" />;
+      return <Navigate to="/login" />;
     }
 
     return children;
@@ -26,9 +26,9 @@ function App() {
       <BrowserRouter>
         <Routes>
 
-          {/* <Route path="/"> */}
+          <Route path="/">
 
-            {/* <Route path="login" element={<Login />} />
+            <Route path="login" element={<Login />} />
             <Route
               index
               element={
@@ -55,12 +55,12 @@ function App() {
             />
 
             <Route path="/register" element={<Register />} />
-          </Route> */}
+          </Route>
 
-          <Route exact path="/" element={<Home />} />
+          {/* <Route exact path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
-          <Route path="/profile" element={<Profile />} />
+          <Route path="/profile" element={<Profile />} /> */}
           {/* <Route path="/error404" element={<Error />} /> */}
         </Routes>
       </BrowserRouter>

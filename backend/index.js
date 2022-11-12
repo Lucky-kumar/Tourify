@@ -6,11 +6,11 @@ const dotenv = require("dotenv");
 const userRoute = require("./routes/users");
 const pinRoute = require("./routes/pins");
 const cookieParser = require("cookie-parser");
-// const cors = require("cors");
+const cors = require("cors");
 
 dotenv.config();
 
-// app.use(cors());
+app.use(cors());
 app.use(express.json());
 app.use(cookieParser());
 
