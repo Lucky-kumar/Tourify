@@ -3,7 +3,7 @@ import axios from 'axios';
 const URL = 'https://travel-advisor.p.rapidapi.com/restaurants/list-by-latlng'
 
 
-export const getPlacesData = async (lat,lng) => {
+export const getPlacesData = async (lat, lng) => {
     try {
         const { data: { data } } = await axios.get(URL, {
             params: {
@@ -11,9 +11,10 @@ export const getPlacesData = async (lat,lng) => {
                 longitude: lng,
             },
             headers: {
-                'X-RapidAPI-Key':'93cc9a3bdbmshd1ad834f614f422p13dcd4jsn7cd27c947d79',
-                'X-RapidAPI-Host':'travel-advisor.p.rapidapi.com'
-    
+
+                'X-RapidAPI-Key': '48efdf1451msh97550b00e337ca9p18cad4jsn280cbc435100',
+                'X-RapidAPI-Host': 'travel-advisor.p.rapidapi.com'
+            
             }
         });
 
