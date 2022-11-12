@@ -12,7 +12,6 @@ const Home = () => {
   const [places, setPlaces] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
 
-
   const [coordinates, setCoordinates] = useState({ lat: 0, lng: 0 });
   // const [bounds, setBounds] = useState(null);
 
@@ -28,6 +27,7 @@ const Home = () => {
       })
 
   }, [coordinates]);
+
 
 
   return (
@@ -50,6 +50,7 @@ const Home = () => {
             <Mapbox
               setCoordinates={setCoordinates}
               coordinates={coordinates}
+              places={places}
             />
           </div>
         </Grid>
