@@ -3,7 +3,7 @@ import axios from 'axios';
 const URL = 'https://travel-advisor.p.rapidapi.com/restaurants/list-by-latlng'
 
 
-export const getPlacesData = async (lat,lng) => {
+export const getPlacesData = async (lat, lng) => {
     try {
         const { data: { data } } = await axios.get(URL, {
             params: {
