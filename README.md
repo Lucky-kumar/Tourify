@@ -25,16 +25,28 @@ The following tech stack will be used:
 ##
 **Features** 
 **1. Login and Rgister pages**<br><br>
-There is a basic landing page that is my Login page , you can always navigate to the signup/register page from here.<br>
+There is a basic landing page that is my Login page , you can always navigate to the signup/register page from here.<br><br>
+
+**Login page**
+![Login Page](https://user-images.githubusercontent.com/82212464/201488711-ac334100-8be3-4434-b2d9-979a27e242d8.jpeg) <br><br>
+**Register page**
+![Register Page](https://user-images.githubusercontent.com/82212464/201488788-00e129cf-c46d-4438-90c4-eb6a8025e224.jpeg)
+
 #
 **2.Home page** <br><br>
-After logging in you will see a home screen and you can view all the all pins .<br>
+After logging in you will see a home screen and you can view all the all pins .<br><br>
+![Home Page](https://user-images.githubusercontent.com/82212464/201488833-b73270a6-c1de-4bc9-a580-085213418c35.jpeg)
 #
 **3.Navbar** <br><br>
-The navbar at the top contains a home icon and other options like  my profile and logout button,all of these are pretty much self explanatory .<br>
+The navbar at the top contains a home icon and other options like  my profile and logout button,all of these are pretty much self explanatory .<br><br>
+![Navbar](https://user-images.githubusercontent.com/82212464/201488895-734f20fa-4cae-40d5-a471-e924d5458e41.jpeg)
+
 #
 **4.SideBar** <br><br>
-The sidebar on the left contains all the restaurants, hotels, and attractions. There is a feature where you can see restaurants, hotels, etc. according to their ratings.
+The sidebar on the left contains all the restaurants, hotels, and attractions. There is a feature where you can see restaurants, hotels, etc. according to their ratings.<br><br>
+![sidebar](https://user-images.githubusercontent.com/82212464/201488927-f4b5b1ae-9726-4e0e-9196-920fa9b2f031.jpeg)
+
+
 #
 **5.Profile Page** <br><br>
 This is a page where users can see all their personal information, like contact numbers, addresses, locations, etc.
@@ -43,12 +55,11 @@ This is a page where users can see all their personal information, like contact 
 #
 **Setting Up the Project**<br><br>
      **Our landing page is Sign In** <br> <br>
-     ![Sign_in]<br><br>
-     
-**1. Clone the repo**<br><br>
-git clone https:https://github.com/Lucky-kumar/Tourify.git <br><br>
 
-**2. Instal npm using commad**<br><br>
+**1. Clone the repo**<br>
+git clone https:https://github.com/Lucky-kumar/Tourify.git <br>
+
+**2. Instal npm using commad**<br>
 commad : npm install <br>
 
 **3.Start npm**<br>
