@@ -9,7 +9,6 @@ import cloud from './images/cloud-303182.svg'
 import { Link, useNavigate } from 'react-router-dom'
 import { AuthContext } from '../context/AuthContext';
 import axios from 'axios';
-
 const Login = () => {
 
   const [values, setValues] = useState({
@@ -58,12 +57,8 @@ const Login = () => {
         <img src={people} alt="" srcset="" className="people image" style={{}} />
         <img src={image1} alt="" srcset="" className="image_1 image" style={{}} />
         <img src={plane} alt="" srcset="" className="plane image" style={{}} />
-        {/* <img src={building} alt="" srcset="" className="building image" style={{}}/>
-        <img src={car} alt="" srcset="" className="car image" style={{}}/> */}
+        
         <div >
-
-          {/* <img src={building} alt="" srcset="" className="building image" style={{}}/> */}
-          {/* <img src={image2} alt="" srcset="" className="image_2" style={{}}/> */}
         </div>
         <div className='form'>
           {/* <img src={plane} alt="" srcset="" className="plane" style={{}}/> */}
@@ -91,6 +86,7 @@ const Login = () => {
                 backgroundColor: "transparent"
               }}>Or</h5>
             <div style={{
+
               color: "red",
               margin: "10px"
             }}
@@ -110,6 +106,9 @@ const Login = () => {
               padding: "10px",
               color: "blue",
             }}><button className='switch_register'>Register now</button></div>
+
+              
+
 
           </Link>
         </div>

@@ -8,9 +8,11 @@ import useFetch from '../hooks/UseFetch'
 
 
 const Profile = () => {
-
   const navigate = useNavigate();
-  const { user, dispatch } = useContext(AuthContext)
+
+
+const { user, dispatch } = useContext(AuthContext)
+
 
   const { data, loading, error } = useFetch(`http://localhost:8000/api/users/${user}`)
 
@@ -21,8 +23,7 @@ const Profile = () => {
   if (error) {
     console.log(error);
   }
-
-
+  // const {} = useContext(AuthContext);
   const handleLogout = async (e) => {
     e.preventDefault();
     dispatch({ type: "LOGOUT" });
@@ -70,7 +71,7 @@ const Profile = () => {
             <div>{data.premium_status}</div>
           </div> */}
 
-          {/* <hr style={{ width: "90%", borderTop: "2px solid gray", borderBottom: "0px" }} />
+          <hr style={{ width: "90%", borderTop: "2px solid gray", borderBottom: "0px" }} />
 
           <div className='info'>
             <InputLabel className='profile_labels'>Pins</InputLabel>
