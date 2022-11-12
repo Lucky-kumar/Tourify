@@ -3,15 +3,24 @@ const Pin = require("../models/Pin");
 
 // create a Pin
 
-router.post("/", async (req, res) => {
+router.post("/:userid", async (req, res) => {
+    const userId = req.params.userid;
     const newPin = new Pin(req.body);
+
     try {
         const savedPin = await newPin.save();
+        try {
+            await User.findByIdAndUpdate(userId, {
+                $push: { pins: savedPin._id },
+            });
+        } catch (err) {
+            console.log(err);
+        }
         res.status(200).json(savedPin);
     } catch (err) {
-        res.status(500).json(err);
+        console.log(err);
     }
-});
+};
 
 // get all pins
 
@@ -56,7 +65,7 @@ router.delete("/:id", async (req, res) => {
 
 router.put("/:id", async (req, res) => {
     try {
-        const updatedPin = await Pin.findByIdAndUpdate(req.params.id , req.body);
+        const updatedPin = await Pin.findByIdAndUpdate(req.params.id, req.body);
         res.status(200).json(updatedPin);
     }
     catch (err) {
