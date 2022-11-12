@@ -1,5 +1,6 @@
 const router = require("express").Router();
-const Pin = require("../models/Pin");
+const Pin = require("../models/Pin.js");
+const User = require("../models/User.js");
 
 // create a Pin
 
@@ -20,7 +21,7 @@ router.post("/:userid", async (req, res) => {
     } catch (err) {
         console.log(err);
     }
-};
+})
 
 // get all pins
 
@@ -50,16 +51,22 @@ router.get("/:id", async (req, res) => {
 
 // delete a pin
 
-router.delete("/:id", async (req, res) => {
+router.delete("/:id/:userid", async (req, res) => {
+    const userId = req.params.userid;
     try {
         await Pin.findByIdAndDelete(req.params.id);
+        try {
+            await User.findByIdAndUpdate(userId, {
+                $pull: { pins: req.params.id },
+            });
+        } catch (err) {
+            console.log(err)
+        }
         res.status(200).json("Pin has been deleted.");
+    } catch (err) {
+        console.log(err)
     }
-    catch (err) {
-        res.status(500).json(err);
-    }
-});
-
+})
 
 // update a pin
 
