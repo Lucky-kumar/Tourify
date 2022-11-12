@@ -6,7 +6,7 @@ import people from './images/team-4423339.svg'
 import image1 from './images/computer-6242945.svg'
 import plane from './images/airplane-2434022.png'
 import cloud from './images/cloud-303182.svg'
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 const Login = () => {
   return (
@@ -45,7 +45,7 @@ const Login = () => {
             {/* <Link to={}> */}
             <button type="submit" className='btn'>Login</button>
             {/* </Link> */}
-            <h5 
+            <h5
               style={{
                 color: "grey",
                 margin: "10px",
@@ -65,12 +65,12 @@ const Login = () => {
             </div>
           </form>
           <Link to={`/register`}>
-          <div style={{
-            backgroundColor: "transparent",
-            margin: "10px",
-            padding: "10px",
-            color: "blue"
-          }}>Register now</div>
+            <div style={{
+              backgroundColor: "transparent",
+              margin: "10px",
+              padding: "10px",
+              color: "blue"
+            }}>Register now</div>
           </Link>
         </div>
 
