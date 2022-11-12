@@ -24,12 +24,21 @@
     text-decoration: none;
 }
 
+/* labels */
+.profile_labels{
+    border-bottom: none;
+}
+
 .content{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     font-size: 45px;
     text-align: center;
     margin: 30px;
     margin-left: 49px;
-    text-decoration: none;
+    /* text-decoration: none; */
 }
 
 Button{

@@ -42,10 +42,12 @@ const Sidebar = ({ places, isLoading }) => {
                   <MenuItem className="menuvaule" value={4.5}>Above 4.5</MenuItem>
                 </Select>
               </FormControl>
-              <Grid container spacing={3} className="sidebar_list">
+              
+              <div style={{marginTop:"20px"}}>
+              <Grid container spacing={0} className="sidebar_list">
                 {
                   places?.map((place, i) => (
-                    <Grid item key={i} xs={12}>
+                    <Grid item key={i} xs={12} style={{marginBottom:"20px"}}>
                       <PlaceCards
                         place={place}
 
@@ -54,7 +56,8 @@ const Sidebar = ({ places, isLoading }) => {
                   ))
                 }
               </Grid>
-          </div>
+              </div>
+              </div>
             </>)}
 
         </div>
