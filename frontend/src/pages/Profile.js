@@ -1,5 +1,4 @@
 import { Button, InputLabel } from '@mui/material'
-import { borderBottom } from '@mui/system'
 import React, { useContext } from 'react'
 import "./Profile.css"
 import { AuthContext } from './../context/AuthContext';
@@ -9,7 +8,7 @@ const Profile = () => {
 
   const { user } = useContext(AuthContext)
 
-  const { data, loading, error, reFetch } = useFetch(`http://localhost:8000/api/users/${user}`)
+  const { data, loading, error } = useFetch(`http://localhost:8000/api/users/${user}`)
 
   if (loading) {
     return "Loading..."
