@@ -20,11 +20,11 @@ const Profile = () => {
             <button>Log Out</button>
             </li> */}
 
-          <InputLabel>Address</InputLabel>
-          <InputLabel>Contact Number</InputLabel>
-          <InputLabel>Email Id</InputLabel>
-          <InputLabel>Location</InputLabel>
-          <InputLabel>Address</InputLabel>
+          <InputLabel className='info'>Address</InputLabel>
+          <InputLabel className='info'>Contact Number</InputLabel>
+          <InputLabel className='info'>Email Id</InputLabel>
+          <InputLabel className='info'>Location</InputLabel>
+          <InputLabel className='info'>Address</InputLabel>
 
           <Button className='LogOut'>Log Out</Button>
           </div>
