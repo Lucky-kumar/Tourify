@@ -22,9 +22,41 @@ The following tech stack will be used:
 ● Rapid APIs
 ● Google Maps API
 
+##
+**Features** 
+**1. Login and Rgister pages**<br><br>
+There is a basic landing page that is my Login page , you can always navigate to the signup/register page from here.<br>
+#
+**2.Home page** <br><br>
+After logging in you will see a home screen and you can view all the all pins .<br>
+#
+**3.Navbar** <br><br>
+The navbar at the top contains a home icon and other options like  my profile and logout button,all of these are pretty much self explanatory .<br>
+#
+**4.SideBar** <br><br>
+The sidebar on the left contains all the restaurants, hotels, and attractions. There is a feature where you can see restaurants, hotels, etc. according to their ratings.
+#
+**5.Profile Page** <br><br>
+This is a page where users can see all their personal information, like contact numbers, addresses, locations, etc.
 
 
+#
+**Setting Up the Project**<br><br>
+     **Our landing page is Sign In** <br> <br>
+     ![Sign_in]<br><br>
+**1. Clone the repo**<br>
+git clone https:https://github.com/Lucky-kumar/Tourify.git
+**2. Instal npm using commad**<br>
+commad : npm install
 
+**3.Start npm**<br>
+
+#
+**Members**<br><br>
+1.[Dipti Singh](2020IMT-029)<br>
+2.[Ekta Kumari](2020IMT-032)<br>
+3.[Lucky Kumar](2020IMT-051)<br>
+4.[Priyankaa Sarkar](2020IMT-075)<br>
 
 
 
