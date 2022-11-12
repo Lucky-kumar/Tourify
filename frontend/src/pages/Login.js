@@ -69,7 +69,7 @@ const Login = () => {
             backgroundColor: "transparent",
             margin: "10px",
             padding: "10px",
-            color: "blue"
+            color: "blue",
           }}>Register now</div>
           </Link>
         </div>

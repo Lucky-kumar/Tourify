@@ -11,6 +11,7 @@ import axios from 'axios'
 import { format } from "timeago.js"
 import "./styles/Mapbox.css"
 import { color } from '@mui/system';
+import Directions from './Directions';
 
 
 const TOKEN = process.env.REACT_APP_MAPBOX_ACCESS_TOKEN;
@@ -178,6 +179,7 @@ const Mapbox = ({setCoordinates, coordinates}) => {
       <FullscreenControl style={{ marginRight: 40 }} position="bottom-right" />
       <GeolocateControl style={{ marginLeft: 40 }} position="top-left" />
       <NavigationControl style={{ marginLeft: 40 }} position="top-left" />
+      <Directions/>
     </Map>)
 }
 
