@@ -1,20 +1,20 @@
 import { Button, InputLabel } from '@mui/material'
-import { borderBottom } from '@mui/system'
-import  { React, useContext } from 'react'
+import React, { useContext } from 'react'
 import Navbar from './../components/Navbar'
 import "./Profile.css"
-import {useNavigate} from "react-router-dom"
+import { useNavigate } from "react-router-dom"
 import { AuthContext } from './../context/AuthContext';
 import useFetch from '../hooks/UseFetch'
-
 
 
 const Profile = () => {
   const navigate = useNavigate();
 
+
 const { user, dispatch } = useContext(AuthContext)
 
-  const { data, loading, error, reFetch } = useFetch(`http://localhost:8000/api/users/${user}`)
+
+  const { data, loading, error } = useFetch(`http://localhost:8000/api/users/${user}`)
 
   if (loading) {
     return "Loading..."
@@ -23,9 +23,6 @@ const { user, dispatch } = useContext(AuthContext)
   if (error) {
     console.log(error);
   }
-
-  
-
   // const {} = useContext(AuthContext);
   const handleLogout = async (e) => {
     e.preventDefault();
@@ -38,8 +35,8 @@ const { user, dispatch } = useContext(AuthContext)
   }
 
   return (<>
-  
-    <Navbar/>
+
+    <Navbar />
     <div className='profile_body'>
       <div className='user_profile'>
 
@@ -80,12 +77,12 @@ const { user, dispatch } = useContext(AuthContext)
             <InputLabel className='profile_labels'>Pins</InputLabel>
             <div className='profile_data'></div>
           </div>
-          <div>
-            <Button className='LogOut' styles={{ marginTop: "20px", marginBottom: "20px" }} onClick={handleLogout}>Log Out</Button></div>
-        </div>
+        <div> */}
+
+          <Button className='LogOut' styles={{ marginTop: "20px", marginBottom: "20px" }} onClick={handleLogout}>Log Out</Button></div>
       </div>
     </div>
-    </>
+  </>
   )
 }
 
