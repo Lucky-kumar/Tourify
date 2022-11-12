@@ -77,10 +77,11 @@ const { user, dispatch } = useContext(AuthContext)
             <InputLabel className='profile_labels'>Pins</InputLabel>
             <div className='profile_data'></div>
           </div>
-        <div> */}
+        <div> 
 
           <Button className='LogOut' styles={{ marginTop: "20px", marginBottom: "20px" }} onClick={handleLogout}>Log Out</Button></div>
       </div>
+    </div>
     </div>
   </>
   )
