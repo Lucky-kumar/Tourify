@@ -11,6 +11,9 @@ const Home = () => {
 
   const [places, setPlaces] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
+  const [type, setType] = useState("restaurants")
+  const [rating, setRating] = useState("")
+
 
   const [coordinates, setCoordinates] = useState({ lat: 0, lng: 0 });
   // const [bounds, setBounds] = useState(null);
@@ -19,14 +22,14 @@ const Home = () => {
 
     setIsLoading(true);
 
-    getPlacesData(coordinates.lat, coordinates.lng)
+    getPlacesData(type, coordinates.lat, coordinates.lng)
       .then((data) => {
         console.log(data);
         setPlaces(data);
         setIsLoading(false);
       })
 
-  }, [coordinates]);
+  }, [coordinates, type]);
 
 
 
@@ -40,7 +43,10 @@ const Home = () => {
             <Sidebar
               places={places}
               isLoading={isLoading}
-
+              type={type}
+              setType={setType}
+              rating={rating}
+              setRating={setRating}
             />
           </div>
         </Grid>
