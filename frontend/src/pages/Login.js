@@ -44,7 +44,7 @@ const Login = () => {
     setValues({ ...values, [e.target.name]: e.target.value });
   };
 
-  // if (loading) return "Loading...";
+  if (loading) return "Loading...";
 
   return (
     <div className='login_body'>
