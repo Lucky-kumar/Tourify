@@ -1,4 +1,3 @@
-import React from 'react'
 import { useControl } from 'react-map-gl'
 import MapboxDirections from "@mapbox/mapbox-gl-directions/dist/mapbox-gl-directions"
 import "@mapbox/mapbox-gl-directions/dist/mapbox-gl-directions.css"

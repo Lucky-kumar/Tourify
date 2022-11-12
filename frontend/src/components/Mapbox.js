@@ -209,6 +209,7 @@ const Mapbox = ({ setCoordinates, coordinates, places }) => {
         <FullscreenControl style={{ marginRight: 40 }} position="bottom-right" />
         <GeolocateControl style={{ marginLeft: 40 }} position="top-left" />
         <NavigationControl style={{ marginLeft: 40 }} position="top-left" />
+        {/* <Directions/> */}
       </>
     </Map>)
 }

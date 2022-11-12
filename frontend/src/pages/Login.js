@@ -17,13 +17,13 @@ const Login = () => {
     password: "",
   });
 
+  console.log(values)
+
   const { loading, error, dispatch } = useContext(AuthContext);
 
   if (error) {
     console.log(error.message);
   }
-
-  console.log(values);
 
   const navigate = useNavigate();
 
@@ -32,7 +32,8 @@ const Login = () => {
     dispatch({ type: "LOGIN_START" });
     try {
       const res = await axios.post("http://localhost:8000/api/users/login", values);
-      dispatch({ type: "LOGIN_SUCCESS", payload: res.data.details });
+      console.log(res.data.details)
+      await dispatch({ type: "LOGIN_SUCCESS", payload: res.data._id });
       navigate("/home")
     } catch (err) {
       dispatch({ type: "LOGIN_FAILURE", payload: err.response.data });
@@ -43,7 +44,7 @@ const Login = () => {
     setValues({ ...values, [e.target.name]: e.target.value });
   };
 
-  if (loading) return "Loading...";
+  // if (loading) return "Loading...";
 
   return (
     <div className='login_body'>
@@ -103,12 +104,12 @@ const Login = () => {
             </div>
           </form>
           <Link to={`/register`}>
-          <div style={{
-            backgroundColor: "transparent",
-            margin: "10px",
-            padding: "10px",
-            color: "blue",
-          }}>Register now</div>
+            <div style={{
+              backgroundColor: "transparent",
+              margin: "10px",
+              padding: "10px",
+              color: "blue",
+            }}>Register now</div>
 
           </Link>
         </div>
