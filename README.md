@@ -51,6 +51,10 @@ The sidebar on the left contains all the restaurants, hotels, and attractions. T
 **5.Profile Page** <br><br>
 This is a page where users can see all their personal information, like contact numbers, addresses, locations, etc.
 
+#
+**6 Add Pin** <br><br>
+With this, users can add pins to their favourite places.<br><br>
+![Add Pin](https://user-images.githubusercontent.com/82212464/201489074-e91bebf6-6365-4bd8-be8f-7a0eaea0f5e8.jpeg)
 
 #
 **Setting Up the Project**<br><br>
@@ -62,10 +66,11 @@ git clone https:https://github.com/Lucky-kumar/Tourify.git <br>
 **2. Instal npm using commad**<br>
 commad : npm install <br>
 
-**3.Start npm**<br>
+**3. Start npm**<br>
 
 #
-**Members**<br><br>
+**Members**<br>
+**Group Number 9**<br>
 1.[Dipti Singh](2020IMT-029)<br>
 2.[Ekta Kumari](2020IMT-032)<br>
 3.[Lucky Kumar](2020IMT-051)<br>
