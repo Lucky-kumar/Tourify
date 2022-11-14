@@ -98,7 +98,7 @@ const Register = () => {
 
               <h4 className='google_option'>Or</h4>
 
-              <div style={{
+              {/* <div style={{
                 color: "red",
                 margin: "10px"
               }}
@@ -109,7 +109,7 @@ const Register = () => {
                   width: "100%", textAlign: "center"
                 }}>Login with Google</div>
                 <GoogleIcon className='icon' />
-              </div>
+              </div> */}
 
             </div>
           </form>

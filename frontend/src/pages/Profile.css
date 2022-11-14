@@ -5,7 +5,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(to right bottom, rgba(158, 233, 236, 0.25) 60%, rgba(7, 236, 244, 0.25) 50.3%);
+    /* background: linear-gradient(to right bottom, rgba(158, 233, 236, 0.25) 60%, rgba(7, 236, 244, 0.25) 50.3%); */
+    background: linear-gradient(to right bottom, #f0bbded7 60%, #c464a48e 50.3%);
 }
 
 .profile_Data{

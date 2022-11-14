@@ -85,7 +85,7 @@ const Login = () => {
                 margin: "10px",
                 backgroundColor: "transparent"
               }}>Or</h5>
-            <div style={{
+            {/* <div style={{
 
               color: "red",
               margin: "10px"
@@ -97,7 +97,7 @@ const Login = () => {
                 width: "100%", textAlign: "center"
               }}>Login with Google</div>
               <GoogleIcon className='icon' />
-            </div>
+            </div> */}
           </form>
           <Link to={`/register`}>
             <div style={{
